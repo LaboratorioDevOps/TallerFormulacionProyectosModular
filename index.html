@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artefacto MML · Formulación de Proyectos</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <div class="app">
+
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">MML</div>
+        <h1>Formulación de Proyectos</h1>
+        <p>Artefacto educativo basado en la Metodología de Marco Lógico CEPAL/ILPES.</p>
+      </div>
+
+      <nav id="navigation"></nav>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+
+        <div class="project-title">
+          <div class="eyebrow">Proyecto</div>
+          <strong id="headerProjectTitle">Proyecto sin título</strong>
+        </div>
+
+        <div class="global-actions">
+          <button type="button" class="btn global-json-btn" id="btnExportJSON">Exportar JSON</button>
+          <button type="button" class="btn global-json-btn" id="btnImportJSON">Importar JSON</button>
+          <input type="file" id="inputImportJSON" accept=".json,application/json" hidden>
+        </div>
+
+        <div class="step-badge">
+          <span id="headerStep">Paso 0</span>
+          <strong id="headerStepName">Ficha del caso</strong>
+        </div>
+
+      </header>
+
+      <div class="content" id="contenidoPantalla"></div>
+
+      <p class="footer-note">
+        Artefacto educativo en construcción. Estructura basada en la secuencia de diez pasos de la Metodología de
+        Marco Lógico de CEPAL/ILPES y en los documentos de formulación del curso.
+      </p>
+    </main>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+
+</html>

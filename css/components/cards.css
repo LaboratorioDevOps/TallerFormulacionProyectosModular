@@ -1,0 +1,27 @@
+.card {
+      background: #fff;
+      border: 1px solid var(--gris-200);
+      border-radius: 12px;
+      box-shadow: var(--sombra);
+      padding: 24px;
+      margin-bottom: 18px;
+    }
+
+.chart-card {
+      border: 1px solid var(--gris-200);
+      border-radius: 10px;
+      background: #fff;
+      padding: 14px;
+      min-width: 0;
+    }
+
+.chart-title {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--gris-900);
+      margin-bottom: 8px;
+    }
+
+.chart-title span {
+      color: var(--verde);
+    }

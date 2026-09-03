@@ -1,0 +1,130 @@
+.main {
+      margin-left: 286px;
+      min-height: 100vh;
+    }
+
+.topbar {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      min-height: 76px;
+      background: rgba(255, 255, 255, .96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--gris-200);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 34px;
+    }
+
+.project-title {
+      min-width: 0;
+    }
+
+.project-title .eyebrow {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--verde);
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      margin-bottom: 3px;
+    }
+
+.project-title strong {
+      display: block;
+      font-size: 17px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 760px;
+    }
+
+.step-badge {
+      flex: 0 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      padding: 8px 12px;
+      border: 1px solid var(--gris-200);
+      border-radius: 9px;
+      background: #fff;
+      color: var(--gris-700);
+      font-size: 13px;
+    }
+
+.step-badge strong {
+      color: var(--verde)
+    }
+
+.content {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 42px 34px 60px;
+    }
+
+@media(max-width:850px) {
+
+.main {
+        margin-left: 235px
+      }
+
+.content {
+        padding: 30px 22px
+      }
+
+.topbar {
+        padding: 12px 22px
+      }
+
+.project-title strong {
+        max-width: 390px
+      }
+
+}
+
+@media(max-width:650px) {
+
+.main {
+        margin-left: 0
+      }
+
+.topbar {
+        position: relative
+      }
+
+.content {
+        padding: 25px 16px 45px
+      }
+
+.topbar {
+        align-items: flex-start;
+        gap: 12px
+      }
+
+.step-badge {
+        font-size: 12px
+      }
+
+}
+
+.global-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-left: auto;
+      margin-right: 12px;
+    }
+
+.global-json-btn {
+      white-space: nowrap;
+    }
+
+@media (max-width: 900px) {
+
+.global-actions {
+        order: 3;
+        width: 100%;
+        margin: 8px 0 0;
+      }
+
+}

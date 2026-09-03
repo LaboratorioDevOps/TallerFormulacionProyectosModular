@@ -1,0 +1,1010 @@
+/* Área de trabajo del árbol */
+#problemTreeWorkspace {
+      min-height: 220px;
+    }
+
+#nodeEvidenceWorkspace {
+      min-height: 120px;
+    }
+
+/* Área de validación */
+#problemValidationWorkspace {
+      min-height: 120px;
+    }
+
+/* Área de bitácora */
+#problemBitacoraWorkspace {
+      min-height: 120px;
+    }
+
+/* Prompts de IA */
+#problemAIPrompts {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+#problemAIPrompts .card {
+      border: 1px solid #e1e5ea;
+      background: #fafbfc;
+    }
+
+#problemAIPrompts textarea {
+      width: 100%;
+      min-height: 150px;
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 12px;
+      line-height: 1.5;
+      background: #ffffff;
+    }
+
+/* =========================================================
+   FIX · PASO 2.2 · PROBLEMA CENTRAL
+   ========================================================= */
+#problemSubscreen-problema .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+#problemSubscreen-problema .field {
+      min-width: 0;
+    }
+
+#problemSubscreen-problema .field.span-3 {
+      grid-column: span 1;
+    }
+
+#problemSubscreen-problema textarea {
+      width: 100%;
+      min-width: 0;
+      min-height: 110px;
+      resize: vertical;
+    }
+
+#problemSubscreen-problema .field label {
+      display: block;
+      min-height: 34px;
+      line-height: 1.35;
+    }
+
+/* En pantallas amplias: cuatro campos en una fila */
+@media (min-width:1100px) {
+
+#problemSubscreen-problema .grid {
+        grid-template-columns:
+          repeat(4, minmax(0, 1fr));
+      }
+
+#problemSubscreen-problema .field.span-3 {
+        grid-column: span 1;
+      }
+
+}
+
+/* En tablet: dos por fila */
+@media (min-width:700px) and (max-width:1099px) {
+
+#problemSubscreen-problema .grid {
+        grid-template-columns:
+          repeat(2, minmax(0, 1fr));
+      }
+
+}
+
+/* En móvil: uno por fila */
+@media (max-width:699px) {
+
+#problemSubscreen-problema .grid {
+        grid-template-columns: 1fr;
+      }
+
+#problemSubscreen-problema .field.span-3 {
+        grid-column: span 1;
+      }
+
+}
+
+/* =========================================================
+   PASO 2.3 · EFECTOS Y CAUSAS
+   DISTRIBUCIÓN VISUAL
+   ========================================================= */
+#problemSubscreen-causas>.card:first-child .grid {
+      display: grid;
+      grid-template-columns: 180px 180px minmax(0, 1fr);
+      gap: 16px;
+      align-items: stretch;
+    }
+
+/* ---------------------------------------------------------
+   FILA 1 · Tipo / Nivel / Nodo padre
+   --------------------------------------------------------- */
+#problemSubscreen-causas>.card:first-child .grid>.field:nth-child(1) {
+      grid-column: 1;
+    }
+
+#problemSubscreen-causas>.card:first-child .grid>.field:nth-child(2) {
+      grid-column: 2;
+    }
+
+#problemSubscreen-causas>.card:first-child .grid>.field:nth-child(3) {
+      grid-column: 3;
+    }
+
+/* ---------------------------------------------------------
+   FILA 2 · Enunciado
+   --------------------------------------------------------- */
+#problemSubscreen-causas>.card:first-child .grid>.field:nth-child(4) {
+      grid-column: 1 / -1;
+    }
+
+#problemSubscreen-causas>.card:first-child .grid>.field:nth-child(4) textarea {
+      min-height: 120px;
+    }
+
+/* ---------------------------------------------------------
+   FILA 3 · Evidencia / Línea base
+   --------------------------------------------------------- */
+#problemSubscreen-causas>.card:first-child .grid>.field:nth-child(5) {
+      grid-column: 1 / 2;
+    }
+
+#problemSubscreen-causas>.card:first-child .grid>.field:nth-child(6) {
+      grid-column: 2 / 4;
+    }
+
+/* ---------------------------------------------------------
+   FILA 4 · Confianza / Origen
+   --------------------------------------------------------- */
+#problemSubscreen-causas>.card:first-child .grid>.field:nth-child(7) {
+      grid-column: 1 / 2;
+    }
+
+#problemSubscreen-causas>.card:first-child .grid>.field:nth-child(8) {
+      grid-column: 2 / 4;
+    }
+
+/* ---------------------------------------------------------
+   CAMPOS
+   --------------------------------------------------------- */
+#problemSubscreen-causas>.card:first-child .field {
+      min-width: 0;
+    }
+
+#problemSubscreen-causas>.card:first-child input,
+    #problemSubscreen-causas>.card:first-child select,
+    #problemSubscreen-causas>.card:first-child textarea {
+      width: 100%;
+      max-width: 100%;
+    }
+
+/* ---------------------------------------------------------
+   ALTURAS Y PROPORCIONES
+   --------------------------------------------------------- */
+#problemSubscreen-causas>.card:first-child .grid>.field:nth-child(1),
+    #problemSubscreen-causas>.card:first-child .grid>.field:nth-child(2),
+    #problemSubscreen-causas>.card:first-child .grid>.field:nth-child(3) {
+      min-height: 94px;
+    }
+
+#problemSubscreen-causas>.card:first-child .grid>.field:nth-child(5),
+    #problemSubscreen-causas>.card:first-child .grid>.field:nth-child(6) {
+      min-height: 150px;
+    }
+
+/* ---------------------------------------------------------
+   TABLET
+   --------------------------------------------------------- */
+@media (max-width:850px) {
+
+#problemSubscreen-causas>.card:first-child .grid {
+        grid-template-columns: 150px 150px minmax(0, 1fr);
+      }
+
+}
+
+/* ---------------------------------------------------------
+   MÓVIL
+   --------------------------------------------------------- */
+@media (max-width:620px) {
+
+#problemSubscreen-causas>.card:first-child .grid {
+        grid-template-columns: 1fr;
+      }
+
+#problemSubscreen-causas>.card:first-child .grid>.field {
+        grid-column: 1 / -1 !important;
+      }
+
+}
+
+/* =========================================================
+   PASO 2.3 · FICHAS DE CAUSAS Y EFECTOS
+   ========================================================= */
+#effectsWorkspace,
+    #causesWorkspace {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+/* Ficha compacta */
+#effectsWorkspace>.card,
+    #causesWorkspace>.card {
+      margin: 0;
+      padding: 14px 16px;
+      border-radius: 10px;
+      box-shadow: none;
+      min-height: 0;
+    }
+
+/* Encabezado de la ficha */
+#effectsWorkspace>.card .section-head,
+    #causesWorkspace>.card .section-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 7px;
+    }
+
+/* Código + tipo */
+#effectsWorkspace>.card .section-head>div:first-child>div,
+    #causesWorkspace>.card .section-head>div:first-child>div {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+/* Código del nodo */
+#effectsWorkspace>.card strong,
+    #causesWorkspace>.card strong {
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+/* Título del nodo */
+#effectsWorkspace>.card h4,
+    #causesWorkspace>.card h4 {
+      margin: 5px 0 0;
+      font-size: 12.5px;
+      line-height: 1.35;
+      font-weight: 700;
+      color: var(--ink-950);
+    }
+
+/* Botón eliminar */
+#effectsWorkspace>.card .btn-mini,
+    #causesWorkspace>.card .btn-mini {
+      flex: 0 0 auto;
+      min-height: 27px;
+      padding: 4px 8px;
+      font-size: 10px;
+    }
+
+/* Metadatos */
+#effectsWorkspace>.card .small-note,
+    #causesWorkspace>.card .small-note {
+      font-size: 10.5px;
+      line-height: 1.45;
+    }
+
+/* Evidencia y línea base */
+#effectsWorkspace>.card>div:last-child,
+    #causesWorkspace>.card>div:last-child {
+      margin-top: 7px !important;
+      gap: 4px !important;
+    }
+
+#effectsWorkspace>.card>div:last-child .small-note,
+    #causesWorkspace>.card>div:last-child .small-note {
+      color: var(--ink-600);
+    }
+
+/* Etiquetas */
+#effectsWorkspace>.card .small-note strong,
+    #causesWorkspace>.card .small-note strong {
+      font-size: 10.5px;
+      color: var(--ink-800);
+    }
+
+/* =========================================================
+   DIFERENCIACIÓN SUTIL
+   ========================================================= */
+#effectsWorkspace>.card {
+      border-left: 3px solid #4b6b8a;
+      background: #fcfdfe;
+    }
+
+#causesWorkspace>.card {
+      border-left: 3px solid #9a6735;
+      background: #fffdfb;
+    }
+
+/* =========================================================
+   MÓVIL
+   ========================================================= */
+@media(max-width:600px) {
+
+#effectsWorkspace>.card .section-head,
+      #causesWorkspace>.card .section-head {
+        flex-direction: column;
+      }
+
+#effectsWorkspace>.card .btn-mini,
+      #causesWorkspace>.card .btn-mini {
+        align-self: flex-start;
+      }
+
+}
+
+/* =========================================================
+   PASO 2.4 · ÁRBOL JERÁRQUICO DE PROBLEMAS
+   ========================================================= */
+#problemTreeWorkspace {
+      width: 100%;
+      overflow: hidden;
+    }
+
+.problem-tree-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 12px;
+      padding: 10px 12px;
+      border-bottom: 1px solid #e5e9ec;
+    }
+
+.problem-tree-header strong {
+      display: block;
+      color: #273442;
+      font-size: 13px;
+      font-weight: 750;
+    }
+
+.problem-tree-header span {
+      display: block;
+      margin-top: 2px;
+      color: #7a858e;
+      font-size: 10.5px;
+    }
+
+.problem-tree-legend {
+      display: flex !important;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+.problem-tree-legend span {
+      display: inline-flex !important;
+      align-items: center;
+      gap: 5px;
+      margin: 0;
+      color: #66737d;
+      font-size: 10px;
+    }
+
+.tree-level-dot {
+      width: 8px;
+      height: 8px;
+      display: inline-block;
+      border-radius: 50%;
+    }
+
+.effect-level-1 {
+      background: #315d82;
+    }
+
+.cause-level-1 {
+      background: #9a6735;
+    }
+
+.central-level {
+      background: #273442;
+    }
+
+/*
+ * Evita que el contenedor de la tarjeta
+ * corte el contenido del árbol.
+ */
+#problemTreeWorkspace {
+      width: 100%;
+      min-height: 0;
+      overflow: visible;
+    }
+
+#problemSubscreen-arbol .card {
+      overflow: visible;
+    }
+
+/*
+ * Los nodos y conectores nunca deben quedar
+ * recortados por un contenedor intermedio.
+ */
+#problemSubscreen-arbol .problem-tree-canvas,
+    #problemSubscreen-arbol .problem-tree-svg {
+      overflow: visible;
+    }
+
+.problem-tree-label {
+      fill: #687680;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .08em;
+    }
+
+.problem-tree-connector {
+      fill: none;
+      stroke: #b8c2c9;
+      stroke-width: 1.6;
+    }
+
+.problem-tree-code {
+      fill: #263540;
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+.problem-tree-type {
+      font-size: 8px;
+      font-weight: 800;
+      letter-spacing: .07em;
+    }
+
+.problem-tree-node-text {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      color: #263540;
+      font-size: 10.5px;
+      line-height: 1.3;
+      font-weight: 650;
+      display: flex;
+      align-items: flex-start;
+    }
+
+.problem-tree-meta {
+      fill: #7a858e;
+      font-size: 8px;
+    }
+
+.problem-tree-central {
+      fill: #f3f5f6;
+      stroke: #273442;
+      stroke-width: 2;
+    }
+
+.problem-tree-central-title {
+      fill: #273442;
+      font-size: 11px;
+      font-weight: 850;
+      letter-spacing: .05em;
+    }
+
+.problem-tree-central-text {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #273442;
+      font-size: 11px;
+      line-height: 1.35;
+      font-weight: 650;
+    }
+
+.problem-tree-reading {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      margin-top: 10px;
+      padding: 10px 12px;
+      border: 1px solid #e1e6e9;
+      border-radius: 8px;
+      background: #f8fafb;
+      color: #687680;
+      font-size: 10.5px;
+      line-height: 1.5;
+    }
+
+.problem-tree-reading strong {
+      flex: 0 0 auto;
+      color: #34444f;
+    }
+
+.problem-tree-reading b {
+      color: #34444f;
+    }
+
+@media(max-width:700px) {
+
+.problem-tree-header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+.problem-tree-legend {
+        width: 100%;
+      }
+
+.problem-tree-reading {
+        flex-direction: column;
+      }
+
+}
+
+/* =========================================================
+   PASO 2.4 · FICHA DE SUSTENTACIÓN DE NODOS
+   ========================================================= */
+.node-evidence-summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 12px;
+      padding: 11px 13px;
+      border: 1px solid #e1e6e9;
+      border-radius: 9px;
+      background: #f8fafb;
+    }
+
+.node-evidence-summary strong {
+      display: block;
+      color: #273442;
+      font-size: 12px;
+    }
+
+.node-evidence-summary span {
+      display: block;
+      margin-top: 3px;
+      color: #78848d;
+      font-size: 10.5px;
+    }
+
+.node-evidence-legend {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      flex-wrap: wrap;
+    }
+
+.node-evidence-legend span {
+      display: inline-flex;
+      margin: 0;
+    }
+
+.node-evidence-statement {
+      max-width: 270px;
+      color: #273442;
+      font-weight: 650;
+      line-height: 1.4;
+    }
+
+.node-evidence-value {
+      max-width: 230px;
+      color: #596873;
+    }
+
+.node-evidence-missing {
+      max-width: 230px;
+      padding: 5px 7px;
+      border-radius: 5px;
+      background: #fff5f3;
+      color: #a13e35;
+      font-size: 10px;
+    }
+
+@media(max-width:700px) {
+
+.node-evidence-summary {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+}
+
+/* =========================================================
+   PASO 2.5 · VALIDACIÓN METODOLÓGICA
+   ========================================================= */
+.problem-validation-summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-top: 16px;
+      padding: 13px 15px;
+      border: 1px solid #dfe5e8;
+      border-radius: 9px;
+      background: #f7f9fa;
+    }
+
+.problem-validation-summary strong {
+      display: block;
+      color: #273442;
+      font-size: 12px;
+    }
+
+.problem-validation-summary span {
+      display: block;
+      margin-top: 3px;
+      color: #73808a;
+      font-size: 10.5px;
+    }
+
+.problem-validation-summary.success {
+      border-color: #cfe3d7;
+      background: #f2faf5;
+    }
+
+.problem-validation-summary.warning {
+      border-color: #eadcb9;
+      background: #fff9eb;
+    }
+
+.problem-validation-summary.error {
+      border-color: #e8cfca;
+      background: #fff4f2;
+    }
+
+.problem-validation-counter {
+      display: flex !important;
+      align-items: center;
+      gap: 7px;
+    }
+
+.problem-validation-counter span {
+      display: inline-flex !important;
+      align-items: center;
+      justify-content: center;
+      min-width: 28px;
+      min-height: 24px;
+      margin: 0;
+      padding: 3px 7px;
+      border-radius: 6px;
+      background: #fff;
+      border: 1px solid #dce2e5;
+      font-size: 10px;
+      font-weight: 800;
+    }
+
+.problem-validation-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+.problem-validation-item {
+      padding: 14px;
+      border: 1px solid #dfe5e8;
+      border-left: 4px solid #9ca8af;
+      border-radius: 9px;
+      background: #fff;
+    }
+
+.problem-validation-item.ok {
+      border-left-color: #4f8a68;
+      background: #fcfefd;
+    }
+
+.problem-validation-item.pending {
+      border-left-color: #b28742;
+      background: #fffdf8;
+    }
+
+.problem-validation-item.error {
+      border-left-color: #a9483e;
+      background: #fffdfc;
+    }
+
+.problem-validation-item-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+.problem-validation-item h4 {
+      margin: 6px 0 0;
+      color: #273442;
+      font-size: 12.5px;
+      font-weight: 750;
+    }
+
+.problem-validation-status {
+      display: inline-flex;
+      min-height: 20px;
+      align-items: center;
+      padding: 3px 6px;
+      border-radius: 5px;
+      font-size: 8.5px;
+      font-weight: 850;
+      letter-spacing: .05em;
+    }
+
+.problem-validation-status.ok {
+      background: #edf7f1;
+      color: #397054;
+    }
+
+.problem-validation-status.pending {
+      background: #fff5df;
+      color: #806126;
+    }
+
+.problem-validation-status.error {
+      background: #fff0ed;
+      color: #963c34;
+    }
+
+.problem-validation-question {
+      margin: 9px 0 0;
+      color: #697680;
+      font-size: 10.5px;
+      line-height: 1.5;
+    }
+
+.problem-validation-message {
+      margin-top: 10px;
+      padding: 8px 9px;
+      border-radius: 6px;
+      background: #f1f8f4;
+      color: #3e6e55;
+      font-size: 10.5px;
+    }
+
+.problem-validation-message.pending {
+      background: #fff7e8;
+      color: #765d2b;
+    }
+
+.problem-validation-findings {
+      margin-top: 10px;
+      padding: 9px 10px;
+      border-radius: 6px;
+      background: #fff5f3;
+      color: #7f443d;
+      font-size: 10.5px;
+    }
+
+.problem-validation-findings strong {
+      color: #963c34;
+    }
+
+.problem-validation-findings ul {
+      margin: 6px 0 0;
+      padding-left: 18px;
+    }
+
+.problem-validation-findings li {
+      margin: 3px 0;
+      line-height: 1.4;
+    }
+
+@media(max-width:800px) {
+
+.problem-validation-grid {
+        grid-template-columns: 1fr;
+      }
+
+.problem-validation-summary {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+}
+
+/* =========================================================
+   PASO 2.7 · BITÁCORA DE IA
+   FORMULARIO
+   ========================================================= */
+#problemSubscreen-bitacora .card:first-child .grid {
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+/* ---------------------------------------------------------
+   FILA 1
+   Propósito · Prompt
+   --------------------------------------------------------- */
+#problemSubscreen-bitacora .card:first-child .grid>.field:nth-child(1) {
+      grid-column: span 4;
+    }
+
+#problemSubscreen-bitacora .card:first-child .grid>.field:nth-child(2) {
+      grid-column: span 8;
+    }
+
+/* ---------------------------------------------------------
+   FILA 2
+   Salida · Error
+   --------------------------------------------------------- */
+#problemSubscreen-bitacora .card:first-child .grid>.field:nth-child(3) {
+      grid-column: span 6;
+    }
+
+#problemSubscreen-bitacora .card:first-child .grid>.field:nth-child(4) {
+      grid-column: span 6;
+    }
+
+/* ---------------------------------------------------------
+   FILA 3
+   Detección · Corrección
+   --------------------------------------------------------- */
+#problemSubscreen-bitacora .card:first-child .grid>.field:nth-child(5) {
+      grid-column: span 6;
+    }
+
+#problemSubscreen-bitacora .card:first-child .grid>.field:nth-child(6) {
+      grid-column: span 6;
+    }
+
+/* ---------------------------------------------------------
+   CAMPOS
+   --------------------------------------------------------- */
+#problemSubscreen-bitacora .card:first-child .field {
+      min-width: 0;
+    }
+
+#problemSubscreen-bitacora .card:first-child input,
+    #problemSubscreen-bitacora .card:first-child textarea,
+    #problemSubscreen-bitacora .card:first-child select {
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+
+/* ---------------------------------------------------------
+   ALTURAS
+   --------------------------------------------------------- */
+#problemSubscreen-bitacora .card:first-child textarea {
+      min-height: 108px;
+      resize: vertical;
+    }
+
+#problemSubscreen-bitacora .card:first-child .grid>.field:nth-child(2) textarea {
+      min-height: 108px;
+    }
+
+/* ---------------------------------------------------------
+   BOTONES
+   --------------------------------------------------------- */
+#problemSubscreen-bitacora .card:first-child+.card {
+      margin-top: 16px;
+    }
+
+#problemSubscreen-bitacora .card:first-child button {
+      white-space: nowrap;
+    }
+
+/* =========================================================
+   REGISTROS
+   ========================================================= */
+.problem-log-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+.problem-log-entry {
+      padding: 15px;
+      border: 1px solid #dfe5e8;
+      border-radius: 10px;
+      background: #fff;
+    }
+
+.problem-log-entry-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #edf0f2;
+    }
+
+.problem-log-entry-head>div {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+.problem-log-entry-head strong {
+      color: #273442;
+      font-size: 12px;
+    }
+
+.problem-log-date {
+      color: #7b8790;
+      font-size: 10px;
+    }
+
+.problem-log-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+.problem-log-grid>div {
+      min-width: 0;
+    }
+
+.problem-log-grid label {
+      display: block;
+      margin-bottom: 5px;
+      color: #566570;
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .03em;
+    }
+
+.problem-log-content {
+      min-height: 55px;
+      padding: 9px 10px;
+      border: 1px solid #e1e6e9;
+      border-radius: 7px;
+      background: #f8fafb;
+      color: #596873;
+      font-size: 10.5px;
+      line-height: 1.5;
+      white-space: pre-wrap;
+    }
+
+.problem-log-content.proposal {
+      background: #fffdf8;
+      border-color: #eadfca;
+    }
+
+.problem-log-content.error {
+      background: #fff8f6;
+      border-color: #ead6d2;
+      color: #7e4841;
+    }
+
+.problem-log-content.correction {
+      background: #f3faf6;
+      border-color: #d2e5da;
+      color: #416b55;
+    }
+
+.problem-log-correction {
+      grid-column: 1 / -1;
+    }
+
+.problem-log-actions {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 10px;
+    }
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media(max-width:750px) {
+
+#problemSubscreen-bitacora .card:first-child .grid {
+        grid-template-columns: 1fr;
+      }
+
+#problemSubscreen-bitacora .card:first-child .grid>.field {
+        grid-column: 1 / -1 !important;
+      }
+
+.problem-log-grid {
+        grid-template-columns: 1fr;
+      }
+
+.problem-log-correction {
+        grid-column: auto;
+      }
+
+.problem-log-entry-head {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+}

@@ -66,7 +66,7 @@ export default {
       const { accion, subpantalla, codigo, indice, prompt, tipo } = objetivo.dataset;
 
       switch (accion) {
-        case "subpantalla":        mostrarSubpantalla(subpantalla, objetivo); break;
+        case "p2:subpantalla":     mostrarSubpantalla(subpantalla, objetivo); break;
         case "validar-enunciado":  validateCentralProblem(); break;
         case "confirmar-enunciado":
           confirmCentralProblem(() => {
@@ -84,7 +84,7 @@ export default {
         case "eliminar-bitacora":  deleteProblemLog(Number(indice)); renderProblemBitacora(); break;
         case "limpiar-bitacora":   clearProblemLogForm(); break;
         case "generar-prompt":     generateProblemPrompt(tipo); break;
-        case "copiar-prompt":      await copiarDesdeElemento(prompt, objetivo); break;
+        case "p2:copiar-prompt":   await copiarDesdeElemento(prompt, objetivo); break;
         case "continuar-paso3":    irAPantalla(3); break;
         default: break;
       }

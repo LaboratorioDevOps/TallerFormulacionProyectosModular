@@ -8,6 +8,11 @@
  * importa la función real y se invoca directamente, sin ningún `typeof`:
  * un import roto falla de forma visible al cargar el módulo, nunca en
  * silencio.
+ *
+ * `data-accion="subpantalla"` se prefija como "p3:subpantalla" (revisión
+ * final, IMPORTANTE 2): sin prefijo colisionaba con el mismo data-accion
+ * del Paso 2, ambos escuchados sobre #contenidoPantalla sin retirarse
+ * nunca.
  */
 
 import { irAPantalla } from "../../core/router.js";
@@ -54,7 +59,7 @@ export default {
       const { accion, subpantalla, codigo } = objetivo.dataset;
 
       switch (accion) {
-        case "subpantalla":        mostrarSubpantalla(subpantalla, objetivo); break;
+        case "p3:subpantalla":     mostrarSubpantalla(subpantalla, objetivo); break;
         case "generar-propuestas": generateObjectiveProposals(); render(); break;
         case "quitar-supuesto":    toggleObjectiveAssumption(codigo, false); break;
         case "continuar-paso4":    irAPantalla(4); break;

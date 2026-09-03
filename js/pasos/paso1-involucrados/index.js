@@ -51,8 +51,11 @@ export default {
         case "limpiar-actor":   clearActorForm();        break;
         case "editar-actor":    editActor(indice);   render(); break;
         case "eliminar-actor":  deleteActor(indice); render(); break;
-        case "copiar-prompt":
+        case "p1:copiar-prompt":
           // Resuelve el defecto 1: copyAIPrompt era privada del IIFE.
+          // Prefijo "p1:" (revisión final, IMPORTANTE 2): "copiar-prompt"
+          // sin prefijo colisionaba con el mismo data-accion del Paso 2,
+          // ambos escuchados sobre #contenidoPantalla sin retirarse nunca.
           await copiarDesdeElemento(objetivo.dataset.prompt, objetivo);
           break;
         case "continuar-paso2": irAPantalla(2); break;

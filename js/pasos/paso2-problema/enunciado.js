@@ -218,7 +218,7 @@ export function validateCentralProblem() {
 }
 
 
-export function confirmCentralProblem() {
+export function confirmCentralProblem(alConfirmar) {
 
   const valid = validateCentralProblem();
 
@@ -290,14 +290,13 @@ export function confirmCentralProblem() {
 
   notificarCambio();
 
-  renderProblemModule();
-
   alert("Problema central confirmado.");
 
-  showProblemSubscreen(
-    "causas",
-    document.querySelector(
-      '.step2-tab[onclick*="causas"]'
-    )
-  );
+  /*
+   * renderProblemModule() (repintar prompts) y el cambio a la subpantalla
+   * "causas" viven en el orquestador (index.js), no aquí: este módulo no
+   * los importa para evitar el ReferenceError que tenía el original
+   * migrado. El orquestador nos pasa un callback con ambas acciones.
+   */
+  if (typeof alConfirmar === "function") alConfirmar();
 }

@@ -67,7 +67,13 @@ export default {
       switch (accion) {
         case "subpantalla":        mostrarSubpantalla(subpantalla, objetivo); break;
         case "validar-enunciado":  validateCentralProblem(); break;
-        case "confirmar-enunciado": confirmCentralProblem(); renderProblemTree(); break;
+        case "confirmar-enunciado":
+          confirmCentralProblem(() => {
+            renderProblemModule();
+            mostrarSubpantalla("causas", null);
+          });
+          renderProblemTree();
+          break;
         case "agregar-nodo":       addProblemNode(); render(); break;
         case "eliminar-nodo":      deleteProblemNode(codigo); render(); break;
         case "validar-arbol":      renderProblemValidationResults(runProblemValidation()); break;

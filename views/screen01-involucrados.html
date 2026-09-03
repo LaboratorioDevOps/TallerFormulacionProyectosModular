@@ -133,11 +133,11 @@
             </div>
 
             <div class="actor-actions">
-              <button type="button" class="btn" id="actorCancelBtn" style="display:none;">
+              <button type="button" class="btn" id="actorCancelBtn" style="display:none;" data-accion="limpiar-actor">
                 Cancelar edición
               </button>
 
-              <button type="button" class="btn btn-primary" id="actorSaveBtn">
+              <button type="button" class="btn btn-primary" id="actorSaveBtn" data-accion="guardar-actor">
                 Agregar involucrado
               </button>
             </div>
@@ -424,7 +424,7 @@
 
           Entrega únicamente hallazgos y preguntas de revisión. Marca toda propuesta como propuesta de IA, con confianza baja y sin evidencia propia.</pre>
 
-                    <button type="button" class="ai-copy-btn">
+                    <button type="button" class="ai-copy-btn" data-accion="copiar-prompt" data-prompt="aiPrompt1">
                       Copiar
                     </button>
                   </div>
@@ -459,7 +459,7 @@
 
           Presenta las observaciones como recomendaciones que el formulador debe validar.</pre>
 
-                    <button type="button" class="ai-copy-btn">
+                    <button type="button" class="ai-copy-btn" data-accion="copiar-prompt" data-prompt="aiPrompt2">
                       Copiar
                     </button>
                   </div>
@@ -499,7 +499,7 @@
           NO inventes evidencia.
           Toda recomendación debe quedar marcada como propuesta de IA, con confianza baja.</pre>
 
-                    <button type="button" class="ai-copy-btn">
+                    <button type="button" class="ai-copy-btn" data-accion="copiar-prompt" data-prompt="aiPrompt3">
                       Copiar
                     </button>
                   </div>
@@ -520,7 +520,7 @@
             </div>
             </div>
             <div class="wizard-actions">
-              <button type="button" class="btn primary">
+              <button type="button" class="btn primary" data-accion="continuar-paso2">
                 Continuar al análisis del problema →
               </button>
             </div>

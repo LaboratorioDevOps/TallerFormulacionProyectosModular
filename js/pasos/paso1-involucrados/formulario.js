@@ -9,6 +9,7 @@
 import { obtenerEstado, notificarCambio } from "../../core/estado.js";
 import { normalizeLines } from "../../utils/texto.js";
 import { actorValue } from "./modelo.js";
+import { validateActor } from "./validacion.js";
 
 /* Cuerpo copiado literalmente de ORIG 7858-7887 (clearActorForm). */
 export function clearActorForm() {

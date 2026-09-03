@@ -43,6 +43,11 @@ export async function irAPantalla(id) {
 
   try {
     contenedor.innerHTML = await cargarVista(paso.vista);
+    // El original marcaba la pantalla activa con display:block vía la clase
+    // "active" sobre <section class="screen">. Al inyectar el parcial por
+    // fetch, esa clase ya no viene puesta salvo en la pantalla 0 (ver
+    // css/layout/wizard.css: .screen{display:none} / .screen.active{display:block}).
+    contenedor.querySelector(".screen")?.classList.add("active");
   } catch (error) {
     mostrarError(contenedor, paso.vista, error);
     return;

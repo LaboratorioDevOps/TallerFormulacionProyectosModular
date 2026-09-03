@@ -27,7 +27,7 @@ export function construirNav(alNavegar) {
     boton.className = "nav-item";
     boton.dataset.pantalla = String(paso.id);
     boton.innerHTML =
-      `<span class="nav-num">${escapeHTML(paso.etiquetaPaso || "·")}</span>` +
+      `<span class="nav-num">${paso.id}</span>` +
       `<span class="nav-label">${escapeHTML(paso.titulo)}</span>`;
     boton.addEventListener("click", () => alNavegar(paso.id));
     seccion.appendChild(boton);

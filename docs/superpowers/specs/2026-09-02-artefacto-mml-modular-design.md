@@ -34,8 +34,8 @@ Convertir un archivo HTML monolítico de 12.352 líneas en un proyecto modular c
 
 | Zona | Líneas | Contenido |
 |---|---|---|
-| `<style>` inline | 8 – 5.344 | Hoja de estilos completa |
-| Markup | 3.130 – 5.343 | 11 `<section class="screen">` |
+| `<style>` inline | 8 – 3.093 | Hoja de estilos completa (3.084 líneas de CSS) |
+| Markup | 3.096 – 5.343 | shell + 11 `<section class="screen">` |
 | `<script>` inline | 5.346 – 12.351 | 92 funciones |
 
 Distribución del JavaScript por dominio:

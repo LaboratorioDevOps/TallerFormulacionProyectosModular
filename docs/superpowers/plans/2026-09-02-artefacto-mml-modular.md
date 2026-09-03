@@ -74,7 +74,7 @@
 | `deleteActor` | 8029-8052 | `IIFE` (envoltorio) | 6878-9515 |
 | `renderMainActorTable` | 8054-8116 | | |
 
-Markup: `<style>` 8-5344 · shell (`.app`/sidebar/topbar) 3097-3139 · `screen0` 3141-3196 · `screen1` 3200-3725 · `screen2` 3728-4694 · `screen3` 4698-5111 · `screen4` 5114-5147 · `screen5` 5150-5178 · `screen6` 5181-5208 · `screen7` 5211-5242 · `screen8` 5245-5272 · `screen9` 5275-5304 · `screen10` 5307-5335 · nota de pie 5337-5341.
+CSS: `<style>` 8-3093 (contenido 9-3092, 3.084 líneas). Markup: shell (`.app`/sidebar/topbar) 3097-3139 · `screen0` 3141-3196 · `screen1` 3200-3725 · `screen2` 3728-4694 · `screen3` 4698-5111 · `screen4` 5114-5147 · `screen5` 5150-5178 · `screen6` 5181-5208 · `screen7` 5211-5242 · `screen8` 5245-5272 · `screen9` 5275-5304 · `screen10` 5307-5335 · nota de pie 5337-5341.
 
 ---
 
@@ -243,7 +243,7 @@ git commit -m "chore: esqueleto de directorios y verificación estática"
 
 **Files:**
 - Create: `css/main.css`, `css/base/{variables,reset,tipografia}.css`, `css/layout/{shell,sidebar,wizard}.css`, `css/components/{botones,campos,cards,tablas,badges,tabs,svg}.css`, `css/pasos/{paso1-involucrados,paso2-problema,paso3-objetivos}.css`
-- Read: `ORIG` líneas 8-5344
+- Read: `ORIG` líneas 9-3092 (contenido del bloque `<style>`, que abre en la 8 y cierra en la 3093)
 
 **Interfaces:**
 - Produces: `css/main.css`, único archivo enlazado desde `index.html`.
@@ -253,8 +253,8 @@ git commit -m "chore: esqueleto de directorios y verificación estática"
 - [ ] **Step 1: Extraer el CSS completo a un archivo de trabajo**
 
 ```bash
-sed -n '9,5343p' ../ArtefactoUnal/artefacto_MML_esqueleto_11_pantallas.html > /tmp/mml-original.css
-wc -l /tmp/mml-original.css   # Expected: 5335
+sed -n '9,3092p' ../ArtefactoUnal/artefacto_MML_esqueleto_11_pantallas.html > /tmp/mml-original.css
+wc -l /tmp/mml-original.css   # Expected: 3084
 ```
 
 - [ ] **Step 2: Repartir las reglas por archivo**

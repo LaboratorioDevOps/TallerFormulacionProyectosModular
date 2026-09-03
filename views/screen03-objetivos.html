@@ -33,31 +33,38 @@
 
             <div class="step3-nav">
 
-              <button type="button" class="step3-tab active">
+              <button type="button" class="step3-tab active"
+                data-accion="subpantalla" data-subpantalla="transformacion">
                 1. Transformación
               </button>
 
-              <button type="button" class="step3-tab">
+              <button type="button" class="step3-tab"
+                data-accion="subpantalla" data-subpantalla="arbol">
                 2. Árbol de objetivos
               </button>
 
-              <button type="button" class="step3-tab">
+              <button type="button" class="step3-tab"
+                data-accion="subpantalla" data-subpantalla="validacion">
                 3. Validación
               </button>
 
-              <button type="button" class="step3-tab">
+              <button type="button" class="step3-tab"
+                data-accion="subpantalla" data-subpantalla="acciones">
                 4. Acciones
               </button>
 
-              <button type="button" class="step3-tab">
+              <button type="button" class="step3-tab"
+                data-accion="subpantalla" data-subpantalla="alternativas">
                 5. Alternativas
               </button>
 
-              <button type="button" class="step3-tab">
+              <button type="button" class="step3-tab"
+                data-accion="subpantalla" data-subpantalla="evaluacion">
                 6. Evaluación
               </button>
 
-              <button type="button" class="step3-tab">
+              <button type="button" class="step3-tab"
+                data-accion="subpantalla" data-subpantalla="seleccion">
                 7. Selección
               </button>
 
@@ -408,6 +415,34 @@
             automáticamente se consideran propuestas y deben ser
             revisados por el formulador. El sistema no decide medios,
             supuestos, pesos ni estrategia.
+
+          </div>
+
+
+          <!-- =====================================================
+              TRANSICIÓN · MÓDULO 3 → MÓDULO 4
+              ===================================================== -->
+
+          <div class="wizard-actions module-transition">
+
+            <div class="module-transition-text">
+
+              <strong>
+                Análisis de objetivos completado
+              </strong>
+
+              <span>
+                El árbol de objetivos alimentará la selección
+                de la estrategia óptima.
+              </span>
+
+            </div>
+
+            <button type="button" class="btn primary" data-accion="continuar-paso4">
+
+              Continuar a la selección de estrategia →
+
+            </button>
 
           </div>
 

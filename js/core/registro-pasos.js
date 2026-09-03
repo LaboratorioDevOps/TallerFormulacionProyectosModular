@@ -9,6 +9,8 @@
  * tareas de cada paso irán sustituyendo su entrada por el módulo real.
  */
 
+import paso3 from "../pasos/paso3-objetivos/index.js";
+
 const PENDIENTE = { init() {}, render() {} };
 
 export const PASOS = [
@@ -36,14 +38,7 @@ export const PASOS = [
     vista: "views/screen02-problema.html",
     ...PENDIENTE
   },
-  {
-    id: 3,
-    titulo: "Análisis de objetivos",
-    grupo: "Análisis situacional",
-    etiquetaPaso: "Paso 3",
-    vista: "views/screen03-objetivos.html",
-    ...PENDIENTE
-  },
+  paso3,
   {
     id: 4,
     titulo: "Selección de la estrategia óptima",

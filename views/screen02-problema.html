@@ -1,0 +1,967 @@
+        <section class="screen" id="screen2">
+
+          <div class="hero">
+            <div class="kicker">Paso 2 · Análisis del problema</div>
+            <h2>Análisis del problema</h2>
+            <p>
+              Construye, organiza y valida el problema central, sus efectos y sus causas
+              antes de avanzar al análisis de objetivos.
+            </p>
+          </div>
+
+          <!-- NAVEGACIÓN INTERNA DEL PASO 2 -->
+          <div class="card">
+            <div class="section-head">
+              <div>
+                <h3>Ruta de trabajo</h3>
+                <p>
+                  El análisis del problema se desarrolla en siete momentos.
+                  Solo uno se muestra a la vez.
+                </p>
+              </div>
+            </div>
+
+            <div class="step2-nav">
+              <button class="step2-tab active">
+                1. Contexto
+              </button>
+
+              <button class="step2-tab">
+                2. Problema central
+              </button>
+
+              <button class="step2-tab">
+                3. Efectos y causas
+              </button>
+
+              <button class="step2-tab">
+                4. Árbol
+              </button>
+
+              <button class="step2-tab">
+                5. Validación
+              </button>
+
+              <button class="step2-tab">
+                6. Prompts
+              </button>
+
+              <button class="step2-tab">
+                7. Bitácora
+              </button>
+            </div>
+          </div>
+
+
+          <!-- 2.1 CONTEXTO -->
+          <div class="problem-subscreen active" id="problemSubscreen-contexto">
+
+            <div class="card">
+              <div class="section-head">
+                <div>
+                  <h3>1. Contexto</h3>
+                  <p>
+                    Registra los elementos del caso que delimitan el análisis del problema.
+                  </p>
+                </div>
+              </div>
+
+              <div class="grid">
+
+                <div class="field span-6">
+                  <label for="problemCaseName">Nombre del caso</label>
+                  <input id="problemCaseName" type="text" placeholder="Nombre del caso">
+                </div>
+
+                <div class="field span-6">
+                  <label for="problemTerritory">Territorio</label>
+                  <input id="problemTerritory" type="text" placeholder="Territorio delimitado">
+                </div>
+
+                <div class="field span-6">
+                  <label for="problemPopulation">Población afectada</label>
+                  <input id="problemPopulation" type="text" placeholder="Población directamente afectada">
+                </div>
+
+                <div class="field span-6">
+                  <label for="problemPeriod">Periodo</label>
+                  <input id="problemPeriod" type="text" placeholder="Periodo de referencia">
+                </div>
+
+                <div class="field span-12">
+                  <label for="problemSituation">Situación problemática</label>
+                  <textarea id="problemSituation"
+                    placeholder="Describe brevemente la situación problemática observada."></textarea>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="section-head">
+                <div>
+                  <h3>Continuidad con el Paso 1</h3>
+                  <p>
+                    Los problemas percibidos por los involucrados constituyen insumos
+                    para el análisis, pero no se convierten automáticamente en causas.
+                  </p>
+                </div>
+              </div>
+
+              <div id="problemStakeholderInputs">
+                <div class="notice">
+                  Los involucrados y sus percepciones se cargarán desde el modelo
+                  general del artefacto.
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+          <!-- 2.2 PROBLEMA CENTRAL -->
+          <!-- 2.2 PROBLEMA CENTRAL -->
+          <div class="problem-subscreen" id="problemSubscreen-problema">
+
+            <div class="card">
+
+              <div class="section-head">
+                <div>
+                  <h3>2. Problema central</h3>
+                  <p>
+                    Formula el problema como un estado negativo observable,
+                    con población y territorio definidos.
+                  </p>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="problemStatement">
+                  Enunciado del problema central
+                </label>
+
+                <textarea id="problemStatement"
+                  placeholder="El enunciado se construirá a partir de los cuatro componentes." readonly
+                  style="background:#f7f8f8;">
+      </textarea>
+              </div>
+
+              <div class="grid" style="margin-top:16px">
+
+                <div class="field span-3">
+                  <label for="problemCondition">
+                    Condición negativa observable *
+                  </label>
+
+                  <textarea id="problemCondition" placeholder="¿Qué estado negativo se observa?"></textarea>
+                </div>
+
+                <div class="field span-3">
+                  <label for="problemAttribute">
+                    Atributo o manifestación *
+                  </label>
+
+                  <textarea id="problemAttribute" placeholder="¿Cómo se manifiesta el problema?"></textarea>
+                </div>
+
+                <div class="field span-3">
+                  <label for="problemCentralPopulation">
+                    Población afectada *
+                  </label>
+
+                  <textarea id="problemCentralPopulation" placeholder="¿Quiénes están afectados?"></textarea>
+                </div>
+
+                <div class="field span-3">
+                  <label for="problemDelimitation">
+                    Territorio y delimitación *
+                  </label>
+
+                  <textarea id="problemDelimitation" placeholder="¿Dónde y durante qué periodo ocurre?"></textarea>
+                </div>
+
+              </div>
+
+              <div class="notice" style="margin-top:16px;">
+                <strong>Regla metodológica:</strong>
+                evita expresiones como "falta", "no hay", "se necesita",
+                "capacitar", "construir" o "implementar". El problema debe
+                expresar un estado negativo, no la ausencia de una solución.
+              </div>
+
+              <div style="margin-top:16px; display:flex; gap:10px; flex-wrap:wrap;">
+
+                <button type="button" class="btn primary">
+                  Validar formulación
+                </button>
+
+                <button type="button" class="btn">
+                  Confirmar problema central
+                </button>
+
+              </div>
+
+              <div id="centralProblemValidation" style="margin-top:16px;">
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- 2.3 EFECTOS Y CAUSAS -->
+          <div class="problem-subscreen" id="problemSubscreen-causas">
+
+            <div class="card">
+
+              <div class="section-head">
+                <div>
+                  <h3>3. Efectos y causas</h3>
+                  <p>
+                    Registra los nodos del árbol de problemas. Cada nodo debe
+                    representar un estado negativo y conservar evidencia,
+                    línea base y nivel de confianza.
+                  </p>
+                </div>
+              </div>
+
+              <div class="grid">
+
+                <div class="field span-3">
+
+                  <label for="nodeType">
+                    Tipo de nodo *
+                  </label>
+
+                  <select id="nodeType">
+                    <option value="causa">Causa</option>
+                    <option value="efecto">Efecto</option>
+                  </select>
+
+                </div>
+
+                <div class="field span-3">
+
+                  <label for="nodeLevel">
+                    Nivel *
+                  </label>
+
+                  <select id="nodeLevel">
+                    <option value="1">1 · Directo</option>
+                    <option value="2">2 · Indirecto</option>
+                    <option value="3">3 · Profundización</option>
+                    <option value="4">4 · Raíz / final</option>
+                  </select>
+
+                </div>
+
+                <div class="field span-6">
+
+                  <label for="nodeParent">
+                    Nodo padre *
+                  </label>
+
+                  <select id="nodeParent">
+                    <option value="P">P · Problema central</option>
+                  </select>
+
+                </div>
+
+                <div class="field span-12">
+
+                  <label for="nodeStatement">
+                    Enunciado del nodo *
+                  </label>
+
+                  <textarea id="nodeStatement"
+                    placeholder="Ejemplo: Baja disponibilidad de oportunidades laborales para jóvenes rurales."></textarea>
+
+                </div>
+
+                <div class="field span-6">
+
+                  <label for="nodeEvidence">
+                    Evidencia
+                  </label>
+
+                  <textarea id="nodeEvidence" placeholder="Fuente o evidencia que respalda el nodo."></textarea>
+
+                </div>
+
+                <div class="field span-6">
+
+                  <label for="nodeBaseline">
+                    Línea base
+                  </label>
+
+                  <textarea id="nodeBaseline"
+                    placeholder="Dato actual disponible o pendiente de consolidar."></textarea>
+
+                </div>
+
+                <div class="field span-4">
+
+                  <label for="nodeConfidence">
+                    Confianza
+                  </label>
+
+                  <select id="nodeConfidence">
+                    <option value="Alta">Alta</option>
+                    <option value="Media" selected>Media</option>
+                    <option value="Baja">Baja</option>
+                  </select>
+
+                </div>
+
+                <div class="field span-8">
+
+                  <label for="nodeOrigin">
+                    Origen
+                  </label>
+
+                  <select id="nodeOrigin">
+                    <option value="Formulador">Formulador</option>
+                    <option value="Propuesta IA">Propuesta IA</option>
+                  </select>
+
+                </div>
+
+              </div>
+
+              <div class="notice" style="margin-top:16px;">
+                Los problemas percibidos por los involucrados son insumos
+                para el análisis. No se convierten automáticamente en causas
+                ni en efectos.
+              </div>
+
+              <div style="margin-top:16px;">
+
+                <button type="button" class="btn primary">
+                  + Agregar nodo
+                </button>
+
+              </div>
+
+            </div>
+
+
+            <div class="grid" style="margin-top:16px;">
+
+              <div class="card span-6">
+
+                <div class="section-head">
+                  <div>
+                    <h3>Efectos registrados</h3>
+                    <p class="small-note">
+                      Consecuencias que se derivan del problema central.
+                    </p>
+                  </div>
+                </div>
+
+                <div id="effectsWorkspace"></div>
+
+              </div>
+
+
+              <div class="card span-6">
+
+                <div class="section-head">
+                  <div>
+                    <h3>Causas registradas</h3>
+                    <p class="small-note">
+                      Factores que explican el problema central.
+                    </p>
+                  </div>
+                </div>
+
+                <div id="causesWorkspace"></div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- 2.4 ÁRBOL -->
+          <div class="problem-subscreen" id="problemSubscreen-arbol">
+
+            <div class="card">
+              <div class="section-head">
+                <div>
+                  <h3>4. Árbol de problemas</h3>
+                  <p>
+                    Integra los efectos, el problema central y las causas
+                    en una estructura causal única.
+                  </p>
+                </div>
+              </div>
+
+              <div id="problemTreeWorkspace"></div>
+            </div>
+
+            <div class="card">
+              <div class="section-head">
+                <div>
+                  <h3>Ficha de sustentación de nodos</h3>
+                  <p>
+                    Cada nodo debe conservar evidencia, línea base y nivel de confianza.
+                  </p>
+                </div>
+              </div>
+
+              <div id="nodeEvidenceWorkspace"></div>
+            </div>
+
+          </div>
+
+          <!-- 2.5 VALIDACIÓN -->
+          <div class="problem-subscreen" id="problemSubscreen-validacion">
+
+            <div class="card">
+
+              <div class="section-head">
+
+                <div>
+                  <h3>5. Validación metodológica</h3>
+
+                  <p>
+                    Revisa la consistencia lógica del árbol antes de continuar.
+                    Las pruebas automáticas identifican hallazgos estructurales;
+                    la decisión metodológica final corresponde al formulador.
+                  </p>
+                </div>
+
+                <button type="button" class="btn primary">
+
+                  Ejecutar validación
+
+                </button>
+
+              </div>
+
+
+              <div id="problemValidationSummary" class="problem-validation-summary">
+
+                <div>
+
+                  <strong>
+                    Validación pendiente
+                  </strong>
+
+                  <span>
+                    Ejecuta las cinco pruebas sobre el árbol construido.
+                  </span>
+
+                </div>
+
+              </div>
+
+
+              <div id="problemValidationWorkspace" class="problem-validation-grid">
+
+                <div class="notice">
+                  Las pruebas de validez se ejecutarán sobre el árbol construido.
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <!-- VALIDACIÓN EXTERNA -->
+
+            <div class="card">
+
+              <div class="section-head">
+
+                <div>
+
+                  <h3>Validación con evidencia e involucrados</h3>
+
+                  <p>
+                    La validación automática no sustituye la confrontación
+                    del árbol con quienes conocen o viven el problema.
+                  </p>
+
+                </div>
+
+              </div>
+
+
+              <div class="notice">
+
+                <strong>Regla metodológica:</strong>
+                registre qué nodos son reconocidos, cuáles no son reconocidos
+                y qué elementos consideran que hacen falta. Si no es posible
+                realizar contacto directo, documente explícitamente la
+                validación mediante fuentes secundarias.
+
+              </div>
+
+
+              <div class="grid" style="margin-top:16px;">
+
+                <div class="field span-4">
+
+                  <label for="validationRecognized">
+                    Nodos reconocidos
+                  </label>
+
+                  <textarea id="validationRecognized"
+                    placeholder="Códigos o elementos del árbol que los involucrados reconocen como parte del problema."></textarea>
+
+                </div>
+
+
+                <div class="field span-4">
+
+                  <label for="validationRejected">
+                    Nodos no reconocidos
+                  </label>
+
+                  <textarea id="validationRejected"
+                    placeholder="Códigos o elementos que fueron cuestionados o no reconocidos."></textarea>
+
+                </div>
+
+
+                <div class="field span-4">
+
+                  <label for="validationMissing">
+                    Nodos o relaciones faltantes
+                  </label>
+
+                  <textarea id="validationMissing"
+                    placeholder="Causas, efectos o relaciones que los involucrados consideran ausentes."></textarea>
+
+                </div>
+
+
+                <div class="field span-6">
+
+                  <label for="validationSource">
+                    Modalidad / fuente de validación
+                  </label>
+
+                  <select id="validationSource">
+
+                    <option value="">
+                      Seleccione...
+                    </option>
+
+                    <option value="Consulta directa">
+                      Consulta directa con involucrados
+                    </option>
+
+                    <option value="Taller participativo">
+                      Taller participativo
+                    </option>
+
+                    <option value="Entrevistas">
+                      Entrevistas
+                    </option>
+
+                    <option value="Fuentes secundarias">
+                      Fuentes secundarias
+                    </option>
+
+                    <option value="Pendiente">
+                      Pendiente
+
+                    </option>
+
+                  </select>
+
+                </div>
+
+
+                <div class="field span-6">
+
+                  <label for="validationObservations">
+                    Observaciones y decisiones
+                  </label>
+
+                  <textarea id="validationObservations"
+                    placeholder="¿Qué se mantiene, qué se corrige y por qué?"></textarea>
+
+                </div>
+
+              </div>
+
+
+              <div style="margin-top:14px;">
+
+                <button type="button" class="btn">
+
+                  Registrar validación externa
+
+                </button>
+
+              </div>
+
+
+              <div id="externalValidationNotice" style="margin-top:12px;">
+              </div>
+
+            </div>
+
+
+            <!-- DECISIÓN DE CIERRE -->
+
+            <div class="card">
+
+              <div class="section-head">
+
+                <div>
+
+                  <h3>Cierre de la validación</h3>
+
+                  <p>
+                    La validación no modifica automáticamente los nodos.
+                    Los hallazgos deben llevar a una corrección deliberada
+                    del árbol.
+                  </p>
+
+                </div>
+
+              </div>
+
+
+              <div class="validation-decision">
+
+                <label class="validation-radio">
+
+                  <input type="radio" name="problemValidationDecision" value="aprobado">
+
+                  <span>
+
+                    <strong>Árbol consistente</strong>
+
+                    <small>
+                      Las pruebas y la confrontación no presentan
+                      hallazgos pendientes relevantes.
+                    </small>
+
+                  </span>
+
+                </label>
+
+
+                <label class="validation-radio">
+
+                  <input type="radio" name="problemValidationDecision" value="ajustes">
+
+                  <span>
+
+                    <strong>Requiere ajustes</strong>
+
+                    <small>
+                      Existen hallazgos que deben corregirse antes
+                      de avanzar.
+                    </small>
+
+                  </span>
+
+                </label>
+
+
+                <label class="validation-radio">
+
+                  <input type="radio" name="problemValidationDecision" value="pendiente">
+
+                  <span>
+
+                    <strong>Validación pendiente</strong>
+
+                    <small>
+                      Aún falta evidencia o confrontación suficiente.
+                    </small>
+
+                  </span>
+
+                </label>
+
+              </div>
+
+
+              <div style="margin-top:14px;">
+
+                <button type="button" class="btn primary">
+
+                  Guardar decisión
+
+                </button>
+
+              </div>
+
+
+              <div id="problemValidationDecisionNotice" style="margin-top:12px;">
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- 2.6 PROMPTS -->
+          <div class="problem-subscreen" id="problemSubscreen-prompts">
+
+            <div class="card">
+              <div class="section-head">
+                <div>
+                  <h3>6. Asistente IA</h3>
+                  <p>
+                    La IA funciona como apoyo para depurar, proponer y cuestionar.
+                    No decide el problema ni valida causalidad.
+                  </p>
+                </div>
+              </div>
+
+              <div class="notice">
+                <strong>Uso responsable:</strong>
+                las propuestas generadas por IA deben ser revisadas por el formulador,
+                contrastadas con evidencia y, cuando corresponda, validadas con los
+                involucrados.
+              </div>
+
+              <div id="problemAIPrompts" style="margin-top:16px">
+
+                <div class="card">
+                  <h3>Depuración del problema central</h3>
+                  <p class="small-note">
+                    Generar una instrucción contextualizada a partir del estado actual.
+                  </p>
+                  <button class="btn">
+                    Preparar consulta
+                  </button>
+                  <button class="btn" type="button">
+                    Copiar consulta
+                  </button>
+                  <textarea id="problemPromptProblema" style="margin-top:10px" readonly
+                    placeholder="La instrucción aparecerá aquí."></textarea>
+                </div>
+
+                <div class="card">
+                  <h3>Propuesta de causas y efectos</h3>
+                  <p class="small-note">
+                    Generar una instrucción para ampliar hipótesis causales y efectos.
+                  </p>
+                  <button class="btn">
+                    Preparar consulta
+                  </button>
+                  <button class="btn" type="button">
+                    Copiar consulta
+                  </button>
+                  <textarea id="problemPromptArbol" style="margin-top:10px" readonly
+                    placeholder="La instrucción aparecerá aquí."></textarea>
+                </div>
+
+                <div class="card">
+                  <h3>Contradicción del árbol</h3>
+                  <p class="small-note">
+                    Generar una instrucción para buscar inconsistencias y supuestos débiles.
+                  </p>
+                  <button class="btn">
+                    Preparar consulta
+                  </button>
+                  <button class="btn" type="button">
+                    Copiar consulta
+                  </button>
+                  <textarea id="problemPromptValidacion" style="margin-top:10px" readonly
+                    placeholder="La instrucción aparecerá aquí."></textarea>
+                </div>
+
+              </div>
+
+              <div class="notice" style="margin-top:16px">
+                No incorporar datos personales. La IA debe utilizarse como apoyo
+                metodológico y no como autoridad sobre la realidad territorial.
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- 2.7 BITÁCORA -->
+          <div class="problem-subscreen" id="problemSubscreen-bitacora">
+
+            <div class="card">
+
+              <div class="section-head">
+
+                <div>
+                  <h3>7. Bitácora de uso de IA</h3>
+
+                  <p>
+                    Registra cómo se utilizó la inteligencia artificial,
+                    qué produjo, qué se detectó y qué decisión tomó
+                    el formulador.
+                  </p>
+                </div>
+
+              </div>
+
+
+              <div class="notice">
+
+                <strong>Uso crítico de IA:</strong>
+                una bitácora sin errores o correcciones no demuestra
+                verificación. Las propuestas del modelo deben ser
+                contrastadas antes de incorporarse al proyecto.
+
+              </div>
+
+
+              <div class="grid" style="margin-top:16px;">
+
+                <div class="field span-4">
+
+                  <label for="logPattern">
+                    Propósito / tarea *
+                  </label>
+
+                  <input id="logPattern" type="text" placeholder="Ej. Depurar problema central">
+
+                </div>
+
+
+                <div class="field span-8">
+
+                  <label for="logPrompt">
+                    Prompt empleado (resumen) *
+                  </label>
+
+                  <textarea id="logPrompt" placeholder="Resume la instrucción utilizada con el modelo."></textarea>
+
+                </div>
+
+
+                <div class="field span-6">
+
+                  <label for="logOutput">
+                    ¿Qué produjo el modelo? *
+                  </label>
+
+                  <textarea id="logOutput"
+                    placeholder="Resume la salida relevante del modelo, indicando que se trata de una propuesta."></textarea>
+
+                </div>
+
+
+                <div class="field span-6">
+
+                  <label for="logError">
+                    ¿Qué produjo mal el modelo? *
+                  </label>
+
+                  <textarea id="logError"
+                    placeholder="Describe el error, inconsistencia, dato no sustentado o problema metodológico detectado."></textarea>
+
+                </div>
+
+
+                <div class="field span-6">
+
+                  <label for="logDetection">
+                    ¿Cómo se detectó?
+                  </label>
+
+                  <textarea id="logDetection"
+                    placeholder="Prueba, comparación con fuente, revisión metodológica, contraste con involucrados, etc."></textarea>
+
+                </div>
+
+
+                <div class="field span-6">
+
+                  <label for="logCorrection">
+                    Corrección humana *
+                  </label>
+
+                  <textarea id="logCorrection" placeholder="Qué se aceptó, descartó o corrigió y por qué."></textarea>
+
+                </div>
+
+              </div>
+
+
+              <div style="margin-top:14px; display:flex; gap:8px; flex-wrap:wrap;">
+
+                <button type="button" class="btn primary">
+
+                  Agregar registro
+
+                </button>
+
+                <button type="button" class="btn">
+
+                  Limpiar
+
+                </button>
+
+              </div>
+
+
+              <div id="problemLogNotice" style="margin-top:12px;">
+              </div>
+
+            </div>
+
+
+            <div class="card">
+
+              <div class="section-head">
+
+                <div>
+
+                  <h3>Registros de la bitácora</h3>
+
+                  <p>
+                    Los registros se conservan dentro del estado del proyecto
+                    y posteriormente podrán exportarse junto con el JSON.
+                  </p>
+
+                </div>
+
+                <span id="problemLogCount" class="badge">
+                  0 registros
+                </span>
+
+              </div>
+
+
+              <div id="problemLogWorkspace"></div>
+
+            </div>
+
+          </div>
+
+          <!-- =====================================================
+              TRANSICIÓN · MÓDULO 2 → MÓDULO 3
+              ===================================================== -->
+
+          <div class="wizard-actions module-transition">
+
+            <div class="module-transition-text">
+
+              <strong>
+                Análisis del problema completado
+              </strong>
+
+              <span>
+                El árbol de problemas alimentará directamente
+                el análisis de objetivos.
+              </span>
+
+            </div>
+
+            <button type="button" class="btn primary">
+
+              Continuar al análisis de objetivos →
+
+            </button>
+
+          </div>
+
+        </section>

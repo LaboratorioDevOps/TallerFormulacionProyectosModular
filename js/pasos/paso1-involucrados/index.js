@@ -10,8 +10,9 @@
  */
 
 import { irAPantalla } from "../../core/router.js";
+import { obtenerEstado } from "../../core/estado.js";
 import { copiarDesdeElemento } from "../../utils/portapapeles.js";
-import { saveActor, editActor, deleteActor, clearActorForm } from "./formulario.js";
+import { saveActor, editActor, deleteActor, clearActorForm, fillActorForm } from "./formulario.js";
 import { renderMainActorTable, renderCharacterization } from "./tablas.js";
 import { drawInterestPowerChart } from "./grafico-poder-interes.js";
 import { drawStakeholderNetwork } from "./grafico-red.js";
@@ -28,6 +29,16 @@ function render() {
   drawStakeholderNetwork();
   renderActorValidations();
   renderTechniqueHelp();
+
+  // Revisión final, IMPORTANTE 6: editingActorIndex persiste en el estado
+  // entre navegaciones, pero el formulario se pierde cada vez que se
+  // reinyecta el parcial (innerHTML =). Sin esto, "Guardar" sobrescribiría
+  // el actor en edición con un formulario vacío.
+  const estado = obtenerEstado();
+  if (estado.editingActorIndex !== null) {
+    const actor = estado.involucrados[estado.editingActorIndex];
+    if (actor) fillActorForm(actor);
+  }
 }
 
 export default {

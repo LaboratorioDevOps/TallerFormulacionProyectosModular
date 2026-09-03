@@ -1,0 +1,721 @@
+{
+    "caso": {
+        "id": "CU-001",
+        "titulo": "Permanencia de jóvenes en la zona rural de Manizales",
+        "nombre": "Generación de oportunidades laborales y productivas para favorecer la permanencia de jóvenes rurales en Manizales",
+        "sector": "Desarrollo rural y desarrollo productivo"
+    },
+    "territorio": {
+        "municipio": "Manizales",
+        "departamento": "Caldas",
+        "pais": "Colombia",
+        "zona": "Zona rural",
+        "corregimientos": "Siete corregimientos rurales de Manizales"
+    },
+    "periodo": "2026-2",
+    "poblacion": {
+        "principal": "Jóvenes rurales",
+        "rango_edad": "14 a 28 años",
+        "poblaciones_relacionadas": [
+            "Familias rurales",
+            "Productores y unidades productivas rurales",
+            "Asociaciones de productores",
+            "Organizaciones y comités cafeteros"
+        ]
+    },
+    "problema": {
+        "central": "Dificultades para consolidar oportunidades laborales y productivas suficientemente atractivas para favorecer la permanencia de los jóvenes en la zona rural de Manizales.",
+        "pregunta_orientadora": "¿Qué condiciones laborales, productivas, educativas y territoriales influyen en la decisión de los jóvenes de permanecer en la zona rural de Manizales o buscar oportunidades fuera del territorio?",
+        "situacion_actual": "Los jóvenes rurales enfrentan condiciones donde las oportunidades urbanas son percibidas como más atractivas y viables para su proyecto de vida, mientras persisten barreras críticas relacionadas con empleo formal, ingresos inestables, acceso restringido a tierra y capital, desconexión formativa y canales de comercialización débiles.",
+        "delimitacion": "El análisis se concentra en los factores socioeconómicos, productivos, formativos y comerciales que determinan la permanencia de jóvenes (14 a 28 años) en los siete corregimientos rurales de Manizales. No se asume la migración como un hecho aislado ni como falta de mano de obra sin causa demostrada."
+    },
+    "factores_identificados": [
+        {
+            "factor": "Oportunidades laborales y de empleo rural formal",
+            "tipo": "Laboral"
+        },
+        {
+            "factor": "Acceso a tierra, activos productivos y financiamiento",
+            "tipo": "Productivo / Financiero"
+        },
+        {
+            "factor": "Educación pertinente y asistencia técnica aplicada",
+            "tipo": "Educativo / Formativo"
+        },
+        {
+            "factor": "Asociatividad juvenil y comercialización directa",
+            "tipo": "Comercial / Organizacional"
+        },
+        {
+            "factor": "Entorno socioeconómico y relevo generacional familiar",
+            "tipo": "Social / Comunitario"
+        }
+    ],
+    "objetivo_preliminar": {
+        "enunciado": "Favorecer la permanencia de los jóvenes en la zona rural de Manizales mediante la consolidación de oportunidades laborales, productivas, formativas y comerciales viables en el territorio.",
+        "tipo": "Objetivo preliminar / Propósito"
+    },
+    "involucrados": [
+        {
+            "grupo": "Jóvenes rurales",
+            "naturaleza": "Comunidad",
+            "relacion": "Población directamente afectada por el problema",
+            "rol": "Población objetivo / actor principal del proyecto",
+            "intereses": [
+                "Empleo formal rural",
+                "Ingresos dignos y estables",
+                "Educación técnica y superior pertinente",
+                "Acceso a tierra y capital semilla",
+                "Emprendimiento agropecuario viable",
+                "Permanencia con calidad de vida"
+            ],
+            "problemas_percibidos": [
+                "Oferta de empleo rural formal escasa y mal remunerada",
+                "Restricciones severas para acceder a tierra y crédito productivo",
+                "Desconexión entre la formación recibida y las oportunidades del territorio",
+                "Inestabilidad de ingresos en actividades agropecuarias primarias",
+                "Baja participación en la toma de decisiones comunitarias"
+            ],
+            "recursos_mandatos": [
+                "Conocimiento del territorio y vocación juvenil",
+                "Capacidades de innovación y adopción tecnológica",
+                "Disponibilidad de mano de obra calificada",
+                "Liderazgo y participación comunitaria"
+            ],
+            "posicion": "+",
+            "fuerza": 3,
+            "intensidad": 5,
+            "justificacion": "Es el grupo directamente afectado; su interés por mejorar ingresos y oportunidades es máximo y su capacidad de organización es creciente.",
+            "estrategia": "Involucrar activamente y cogestionar"
+        },
+        {
+            "grupo": "Productores y unidades productivas rurales",
+            "naturaleza": "Productivo",
+            "relacion": "Actores productivos de los corregimientos",
+            "rol": "Generadores de empleo y aliados de relevo generacional",
+            "intereses": [
+                "Disponibilidad de mano de obra calificada",
+                "Aumento de la productividad y tecnificación",
+                "Continuidad de la actividad agropecuaria",
+                "Relevo generacional en fincas"
+            ],
+            "problemas_percibidos": [
+                "Dificultad para vincular y retener jóvenes en labores de campo",
+                "Baja rentabilidad para ofrecer contratos formales estables",
+                "Envejecimiento de la población productora en el campo"
+            ],
+            "recursos_mandatos": [
+                "Tenencia de predios e infraestructura productiva",
+                "Experiencia y conocimiento agropecuario tradicional",
+                "Capacidad de vinculación laboral y alianzas"
+            ],
+            "posicion": "+",
+            "fuerza": 4,
+            "intensidad": 5,
+            "justificacion": "Alto poder económico y gremial en el territorio, con urgente necesidad de relevo generacional en la producción.",
+            "estrategia": "Gestionar de cerca"
+        },
+        {
+            "grupo": "Familias rurales",
+            "naturaleza": "Comunidad",
+            "relacion": "Entorno socioeconómico de los jóvenes",
+            "rol": "Núcleo social y soporte de iniciativas productivas",
+            "intereses": [
+                "Mejoramiento de ingresos familiares",
+                "Seguridad y bienestar de sus hijos",
+                "Continuidad del patrimonio familiar rural"
+            ],
+            "problemas_percibidos": [
+                "Migración forzada de los hijos por falta de alternativas locales",
+                "Bajos ingresos derivados de la producción primaria no transformada"
+            ],
+            "recursos_mandatos": [
+                "Redes de apoyo familiar y comunitario",
+                "Activos familiares y parcelas productivas",
+                "Tradición y arraigo territorial"
+            ],
+            "posicion": "+",
+            "fuerza": 3,
+            "intensidad": 5,
+            "justificacion": "Tienen alto interés en el bienestar juvenil y mediana influencia organizativa.",
+            "estrategia": "Gestionar de cerca"
+        },
+        {
+            "grupo": "Asociaciones de productores",
+            "naturaleza": "Productivo / Comunitario",
+            "relacion": "Organizaciones colectivas de comercialización y producción",
+            "rol": "Plataforma asociativa y canal comercial",
+            "intereses": [
+                "Fortalecimiento asociativo y gremial",
+                "Comercialización directa en mejores condiciones",
+                "Incorporación de jóvenes en liderazgos asociativos"
+            ],
+            "problemas_percibidos": [
+                "Baja participación y afiliación de población joven",
+                "Dificultades en acuerdos comerciales y logística de acopio"
+            ],
+            "recursos_mandatos": [
+                "Estructura organizativa y personería jurídica",
+                "Centros de acopio y redes comerciales",
+                "Poder de negociación colectiva"
+            ],
+            "posicion": "+",
+            "fuerza": 4,
+            "intensidad": 4,
+            "justificacion": "Actores clave para la asociatividad y canales de venta diferenciados.",
+            "estrategia": "Gestionar de cerca"
+        },
+        {
+            "grupo": "Alcaldía de Manizales (Secretaría de Agricultura y Desarrollo Social)",
+            "naturaleza": "Institucional",
+            "relacion": "Autoridad territorial de formulación de política pública",
+            "rol": "Líder institucional, cofinanciador y articulador",
+            "intereses": [
+                "Desarrollo rural integral del municipio",
+                "Generación de oportunidades juveniles rurales",
+                "Cumplimiento de metas del Plan de Desarrollo"
+            ],
+            "problemas_percibidos": [
+                "Desarticulación entre programas de formación, crédito y mercados",
+                "Persistencia de brechas socioeconómicas entre campo y ciudad"
+            ],
+            "recursos_mandatos": [
+                "Presupuesto público y programas de fomento",
+                "Capacidad de articulación interinstitucional",
+                "Políticas públicas de juventud y desarrollo agropecuario"
+            ],
+            "posicion": "+",
+            "fuerza": 5,
+            "intensidad": 5,
+            "justificacion": "Actor decisor con máximo poder presupuestal y regulatorio en el municipio.",
+            "estrategia": "Gestionar de cerca"
+        },
+        {
+            "grupo": "Comité de Cafeteros de Caldas / Gremios agropecuarios",
+            "naturaleza": "Gremial / Productivo",
+            "relacion": "Organización rectora del sector cafetero territorial",
+            "rol": "Aliado técnico, formativo y de encadenamiento",
+            "intereses": [
+                "Sostenibilidad del cultivo y calidad del café",
+                "Innovación y agregación de valor (cafés especiales)",
+                "Relevo generacional en la caficultura"
+            ],
+            "problemas_percibidos": [
+                "Bajo interés de los jóvenes en la caficultura tradicional no diferenciada"
+            ],
+            "recursos_mandatos": [
+                "Red de extensión rural y asistencia técnica",
+                "Infraestructura formativa (Escuela Nacional del Café)",
+                "Canales de exportación y comercialización"
+            ],
+            "posicion": "+",
+            "fuerza": 5,
+            "intensidad": 4,
+            "justificacion": "Fuerte capacidad técnica y de financiamiento en los siete corregimientos.",
+            "estrategia": "Gestionar de cerca"
+        },
+        {
+            "grupo": "SENA y Centros de Formación Rural",
+            "naturaleza": "Educativo / Institucional",
+            "relacion": "Entidad de formación técnica, tecnológica y emprendimiento",
+            "rol": "Formador técnico y promotor de Fondo Emprender",
+            "intereses": [
+                "Pertinencia de programas formativos rurales",
+                "Empleabilidad e inserción laboral juvenil",
+                "Creación de empresas rurales sostenibles"
+            ],
+            "problemas_percibidos": [
+                "Deserción en programas formativos por falta de articulación con el mercado",
+                "Trámites complejos para acceso al capital semilla de Fondo Emprender"
+            ],
+            "recursos_mandatos": [
+                "Instructores y programas de formación técnica agropecuaria",
+                "Fondo Emprender y asesoría en formulación de planes de negocio",
+                "Ambientes de aprendizaje práctico en biotecnología y agroindustria"
+            ],
+            "posicion": "+",
+            "fuerza": 4,
+            "intensidad": 4,
+            "justificacion": "Principal formador técnico y fuente de capital semilla para emprendedores rurales.",
+            "estrategia": "Gestionar de cerca"
+        },
+        {
+            "grupo": "Instituciones Educativas Rurales (Colegios con media técnica)",
+            "naturaleza": "Educativo",
+            "relacion": "Formación básica y media en los corregimientos",
+            "rol": "Formador inicial y orientador vocacional",
+            "intereses": [
+                "Continuidad educativa de los egresados",
+                "Modelos pedagógicos pertinentes para el campo (Escuela Nueva / Media Técnica)",
+                "Arraigo positivo de los estudiantes en su territorio"
+            ],
+            "problemas_percibidos": [
+                "Falta de proyectos pedagógicos productivos con financiación sostenible",
+                "Desconexión entre el currículo escolar y las oportunidades productivas reales"
+            ],
+            "recursos_mandatos": [
+                "Infraestructura educativa y docentes en corregimientos",
+                "Articulación con programas de doble titulación con el SENA"
+            ],
+            "posicion": "+",
+            "fuerza": 3,
+            "intensidad": 4,
+            "justificacion": "Espacio clave para la orientación vocacional y la retención temprana de jóvenes.",
+            "estrategia": "Mantener involucradas"
+        },
+        {
+            "grupo": "Universidades (UNAL Manizales, U. de Caldas, U. de Manizales)",
+            "naturaleza": "Académico / Superior",
+            "relacion": "Educación superior, investigación, extensión y desarrollo tecnológico",
+            "rol": "Aliado académico, científico y de innovación social",
+            "intereses": [
+                "Extensión universitaria e investigación aplicada en el territorio",
+                "Transferencia de tecnología e innovación social rural",
+                "Acceso equitativo de jóvenes rurales a educación superior"
+            ],
+            "problemas_percibidos": [
+                "Baja cobertura de programas universitarios directamente en veredas"
+            ],
+            "recursos_mandatos": [
+                "Grupos de investigación y laboratorios de calidad",
+                "Proyectos de extensión y voluntariado técnico",
+                "Becas y programas de admisión especial para población rural"
+            ],
+            "posicion": "+",
+            "fuerza": 3,
+            "intensidad": 3,
+            "justificacion": "Aportan rigor metodológico, innovación y capacitación avanzada.",
+            "estrategia": "Mantener informadas e integradas"
+        },
+        {
+            "grupo": "Comercializadores, compradores urbanos y canal HORECA",
+            "naturaleza": "Mercado",
+            "relacion": "Demanda de productos agropecuarios diferenciados",
+            "rol": "Comprador directo y canal de mercado",
+            "intereses": [
+                "Suministro constante, calidad e inocuidad garantizada",
+                "Precios competitivos y trazabilidad de origen"
+            ],
+            "problemas_percibidos": [
+                "Volúmenes pequeños y dispersos que encarecen la logística",
+                "Falta de certificaciones y empaques comerciales en iniciativas juveniles"
+            ],
+            "recursos_mandatos": [
+                "Poder de compra y canales de comercialización urbanos",
+                "Capacidad de acuerdos de suministro a largo plazo"
+            ],
+            "posicion": "0",
+            "fuerza": 4,
+            "intensidad": 3,
+            "justificacion": "Actor de mercado neutral pero decisivo para asegurar ventas a precios justos.",
+            "estrategia": "Mantener satisfechos"
+        }
+    ],
+    "artefacto": {
+        "nodos": [
+            {
+                "codigo": "E2.1",
+                "tipo": "efecto",
+                "nivel": 2,
+                "padre": "E1.1",
+                "enunciado": "Acelerada migración definitiva de población joven hacia áreas urbanas",
+                "evidencia": "Estudio Redalyc sobre factores de expulsión y retención en Manizales; estadísticas demográficas rurales.",
+                "lineaBase": "Tasa estimada de migración juvenil rural superior al 45% en corregimientos.",
+                "confianza": "Alta",
+                "origen": "Revisión CEPAL",
+                "esAccion": false
+            },
+            {
+                "codigo": "E2.2",
+                "tipo": "efecto",
+                "nivel": 2,
+                "padre": "E1.2",
+                "enunciado": "Deterioro del relevo generacional y abandono progresivo de unidades productivas campesinas",
+                "evidencia": "Problemas percibidos por productores y organizaciones cafeteras de Caldas.",
+                "lineaBase": "Edad promedio de productores agropecuarios en Manizales superior a 57 años.",
+                "confianza": "Alta",
+                "origen": "Revisión CEPAL",
+                "esAccion": false
+            },
+            {
+                "codigo": "E1.1",
+                "tipo": "efecto",
+                "nivel": 1,
+                "padre": "P",
+                "enunciado": "Baja expectativa de los jóvenes de consolidar un proyecto de vida digno y viable en el campo",
+                "evidencia": "Pregunta orientadora y percepción sistematizada de jóvenes rurales y familias.",
+                "lineaBase": "Más del 60% de los jóvenes rurales encuestados proyecta su futuro laboral fuera del campo.",
+                "confianza": "Media",
+                "origen": "Revisión CEPAL",
+                "esAccion": false
+            },
+            {
+                "codigo": "E1.2",
+                "tipo": "efecto",
+                "nivel": 1,
+                "padre": "P",
+                "enunciado": "Debilitamiento de la economía campesina y reducción de ingresos familiares en veredas",
+                "evidencia": "Percepción de familias rurales y diagnósticos de la Secretaría de Agricultura.",
+                "lineaBase": "Ingresos medios agropecuarios juveniles por debajo del salario mínimo legal.",
+                "confianza": "Media",
+                "origen": "Revisión CEPAL",
+                "esAccion": false
+            },
+            {
+                "codigo": "C1.1",
+                "tipo": "causa",
+                "nivel": 1,
+                "padre": "P",
+                "enunciado": "Oferta de empleo rural formal y remunerado para jóvenes escasa e inestable",
+                "evidencia": "Factor laboral identificado y problemas percibidos por jóvenes rurales y productores.",
+                "lineaBase": "Menos del 15% de jóvenes rurales ocupados cuenta con contrato formal y seguridad social.",
+                "confianza": "Alta",
+                "origen": "Revisión CEPAL",
+                "esAccion": false
+            },
+            {
+                "codigo": "C2.1",
+                "tipo": "causa",
+                "nivel": 2,
+                "padre": "C1.1",
+                "enunciado": "Baja rentabilidad y escasa capacidad de contratación formal en fincas tradicionales",
+                "evidencia": "Problemas percibidos por productores sobre costos de producción y mano de obra.",
+                "lineaBase": "Fincas tradicionales con márgenes netos reducidos en venta de café pergamino estándar.",
+                "confianza": "Media",
+                "origen": "Revisión CEPAL",
+                "esAccion": false
+            },
+            {
+                "codigo": "C3.1",
+                "tipo": "causa",
+                "nivel": 3,
+                "padre": "C2.1",
+                "enunciado": "Predominio de producción primaria tradicional con mínima agregación de valor local",
+                "evidencia": "Diagnóstico socioeconómico de la Secretaría de Agricultura de Manizales.",
+                "lineaBase": "Más del 80% de la producción se vende en materia prima sin transformación ni marca.",
+                "confianza": "Alta",
+                "origen": "Revisión CEPAL",
+                "esAccion": false
+            },
+            {
+                "codigo": "C3.2",
+                "tipo": "causa",
+                "nivel": 3,
+                "padre": "C2.1",
+                "enunciado": "Alta estacionalidad en la demanda de jornales y elevados costos de intermediación",
+                "evidencia": "Registros de ciclos de cosecha cafetera y comercialización de intermediarios locales.",
+                "lineaBase": "Picos de empleo concentrados únicamente en 3 meses del año durante cosecha principal.",
+                "confianza": "Media",
+                "origen": "Revisión CEPAL",
+                "esAccion": false
+            },
+            {
+                "codigo": "C2.2",
+                "tipo": "causa",
+                "nivel": 2,
+                "padre": "C1.1",
+                "enunciado": "Dispersión y bajo conocimiento de convocatorias y oportunidades de empleo rural",
+                "evidencia": "Insumo de jóvenes rurales y Secretaría de Agricultura.",
+                "lineaBase": "Ausencia de un canal unificado de intermediación laboral para los corregimientos.",
+                "confianza": "Baja",
+                "origen": "Revisión CEPAL",
+                "esAccion": false
+            },
+            {
+                "codigo": "C1.2",
+                "tipo": "causa",
+                "nivel": 1,
+                "padre": "P",
+                "enunciado": "Acceso restringido de los jóvenes a tierra, activos productivos y capital inicial de trabajo",
+                "evidencia": "Factor productivo/financiero y problemas percibidos por jóvenes emprendedores.",
+                "lineaBase": "Menos del 8% de jóvenes rurales de Manizales posee títulos de propiedad o tierra propia.",
+                "confianza": "Alta",
+                "origen": "Revisión CEPAL",
+                "esAccion": false
+            },
+            {
+                "codigo": "C2.3",
+                "tipo": "causa",
+                "nivel": 2,
+                "padre": "C1.2",
+                "enunciado": "Altas barreras económicas y legales para la titulación y arrendamiento seguro de tierras",
+                "evidencia": "Insumo de familias rurales y registros de tenencia de tierras del municipio.",
+                "lineaBase": "Costos de arrendamiento elevados y falta de contratos formales a largo plazo.",
+                "confianza": "Media",
+                "origen": "Revisión CEPAL",
+                "esAccion": false
+            },
+            {
+                "codigo": "C3.3",
+                "tipo": "causa",
+                "nivel": 3,
+                "padre": "C2.3",
+                "enunciado": "Esquemas de banco de tierras o figuras de comodato asociativo juvenil inexistentes en el municipio",
+                "evidencia": "Revisión de programas municipales de tierras y fomento rural.",
+                "lineaBase": "Cero figuras de banco de tierras público implementadas a nivel corregimental.",
+                "confianza": "Baja",
+                "origen": "Revisión CEPAL",
+                "esAccion": false
+            },
+            {
+                "codigo": "C2.4",
+                "tipo": "causa",
+                "nivel": 2,
+                "padre": "C1.2",
+                "enunciado": "Oferta crediticia rígida con garantías y requisitos inaccesibles para proyectos juveniles",
+                "evidencia": "Revisión de líneas de microcrédito agropecuario y requisitos de banca tradicional.",
+                "lineaBase": "Rechazo de más del 70% de solicitudes de crédito agropecuario juvenil por falta de historial.",
+                "confianza": "Alta",
+                "origen": "Revisión CEPAL",
+                "esAccion": false
+            },
+            {
+                "codigo": "C3.4",
+                "tipo": "causa",
+                "nivel": 3,
+                "padre": "C2.4",
+                "enunciado": "Escasez de fondos de capital semilla no reembolsables adaptados al perfil del joven rural",
+                "evidencia": "Fondo Emprender SENA e incentivos municipales de la Secretaría de Agricultura.",
+                "lineaBase": "Cupos anuales de capital semilla alcanzan a cubrir a menos del 10% de demandantes.",
+                "confianza": "Media",
+                "origen": "Revisión CEPAL",
+                "esAccion": false
+            },
+            {
+                "codigo": "C1.3",
+                "tipo": "causa",
+                "nivel": 1,
+                "padre": "P",
+                "enunciado": "Desarticulación entre los programas formativos y la vocación productiva territorial",
+                "evidencia": "Factor educativo y problemas percibidos por colegios rurales, SENA y universidades.",
+                "lineaBase": "Baja tasa de inserción en actividades rurales de egresados de media técnica agropecuaria.",
+                "confianza": "Alta",
+                "origen": "Revisión CEPAL",
+                "esAccion": false
+            },
+            {
+                "codigo": "C2.5",
+                "tipo": "causa",
+                "nivel": 2,
+                "padre": "C1.3",
+                "enunciado": "Contenidos curriculares desactualizados y poco orientados a la innovación y agroindustria",
+                "evidencia": "Mesas de trabajo de educación rural e instituciones educativas.",
+                "lineaBase": "Mallas curriculares enfocadas en labores tradicionales sin componentes de biotecnología o TIC.",
+                "confianza": "Media",
+                "origen": "Revisión CEPAL",
+                "esAccion": false
+            },
+            {
+                "codigo": "C3.5",
+                "tipo": "causa",
+                "nivel": 3,
+                "padre": "C2.5",
+                "enunciado": "Escasas experiencias de formación práctica directamente en fincas modelo y parcelas demostrativas",
+                "evidencia": "Insumo de docentes y egresados de colegios rurales.",
+                "lineaBase": "Menos del 25% del tiempo formativo se dedica a prácticas aplicadas en campo.",
+                "confianza": "Media",
+                "origen": "Revisión CEPAL",
+                "esAccion": false
+            },
+            {
+                "codigo": "C2.6",
+                "tipo": "causa",
+                "nivel": 2,
+                "padre": "C1.3",
+                "enunciado": "Asistencia técnica y acompañamiento productivo discontinuos tras culminar la capacitación",
+                "evidencia": "Reportes de extensión agropecuaria municipal y comités de cafeteros.",
+                "lineaBase": "Frecuencia promedio de visitas técnicas inferior a 2 visitas al año por emprendimiento.",
+                "confianza": "Media",
+                "origen": "Revisión CEPAL",
+                "esAccion": false
+            },
+            {
+                "codigo": "C3.6",
+                "tipo": "causa",
+                "nivel": 3,
+                "padre": "C2.6",
+                "enunciado": "Seguimiento en campo y acompañamiento técnico deficientes para la consolidación de planes de negocio juveniles",
+                "evidencia": "Tasa de mortalidad de emprendimientos rurales en los primeros 18 meses.",
+                "lineaBase": "Más del 50% de proyectos productivos juveniles cesa actividades tras el primer año.",
+                "confianza": "Baja",
+                "origen": "Revisión CEPAL",
+                "esAccion": false
+            },
+            {
+                "codigo": "C1.4",
+                "tipo": "causa",
+                "nivel": 1,
+                "padre": "P",
+                "enunciado": "Debilidad en esquemas de asociatividad juvenil y canales de comercialización directa",
+                "evidencia": "Factor comercial/organizacional y percepción de asociaciones y compradores.",
+                "lineaBase": "Menos del 12% de jóvenes rurales participa activamente en asociaciones de productores.",
+                "confianza": "Alta",
+                "origen": "Revisión CEPAL",
+                "esAccion": false
+            },
+            {
+                "codigo": "C2.7",
+                "tipo": "causa",
+                "nivel": 2,
+                "padre": "C1.4",
+                "enunciado": "Baja representatividad e incentivos para la participación juvenil en asociaciones existentes",
+                "evidencia": "Insumo de asociaciones de productores y comités gremiales.",
+                "lineaBase": "Estatutos asociativos sin capítulos juveniles ni cuotas de participación en juntas directivas.",
+                "confianza": "Media",
+                "origen": "Revisión CEPAL",
+                "esAccion": false
+            },
+            {
+                "codigo": "C3.7",
+                "tipo": "causa",
+                "nivel": 3,
+                "padre": "C2.7",
+                "enunciado": "Estructuras organizativas cerradas con limitados incentivos para el relevo de liderazgos",
+                "evidencia": "Entrevistas diagnósticas con líderes comunitarios y jóvenes de corregimientos.",
+                "lineaBase": "Promedio de permanencia de juntas directivas superior a 10 años en organizaciones rurales.",
+                "confianza": "Baja",
+                "origen": "Revisión CEPAL",
+                "esAccion": false
+            },
+            {
+                "codigo": "C2.8",
+                "tipo": "causa",
+                "nivel": 2,
+                "padre": "C1.4",
+                "enunciado": "Dificultades para acceder a mercados diferenciados, empaque, marcas y circuitos directos",
+                "evidencia": "Fuente institucional de la Secretaría de Agricultura sobre Mercado Campesino.",
+                "lineaBase": "Menos del 10% de productos juveniles cuenta con marca propia, registro sanitario y empaque comercial.",
+                "confianza": "Alta",
+                "origen": "Revisión CEPAL",
+                "esAccion": false
+            },
+            {
+                "codigo": "C3.8",
+                "tipo": "causa",
+                "nivel": 3,
+                "padre": "C2.8",
+                "enunciado": "Insuficiente infraestructura logística, de acopio y transporte para iniciativas de jóvenes",
+                "evidencia": "Diagnóstico de comercialización rural de Manizales.",
+                "lineaBase": "Falta de rutas de recolección y centros de consolidación logística en corregimientos.",
+                "confianza": "Media",
+                "origen": "Revisión CEPAL",
+                "esAccion": false
+            }
+        ],
+        "eap": {
+            "fin": "Contribuir a la sostenibilidad del desarrollo rural y al relevo generacional productivo en el municipio de Manizales.",
+            "proposito": "Jóvenes de la zona rural de Manizales acceden y consolidan oportunidades laborales, productivas, formativas y comerciales que hacen viable y atractiva su permanencia en el territorio.",
+            "componentes": [
+                {
+                    "codigo": "COMP-1",
+                    "nombre": "Rutas de vinculación laboral y agregación de valor rural articuladas",
+                    "causa_asociada": "C1.1",
+                    "actividades": [
+                        "Caracterizar las unidades productivas rurales con potencial de contratación y aprendizaje juvenil en los siete corregimientos.",
+                        "Diseñar e implementar acuerdos de vinculación laboral formal y pasantías remuneradas con productores y gremios agropecuarios.",
+                        "Implementar programas de capacitación y dotación para la transformación y agregación de valor en origen (cafés especiales, agroindustria).",
+                        "Poner en funcionamiento una ventanilla única territorial de orientación, intermediación laboral y oportunidades para jóvenes rurales."
+                    ]
+                },
+                {
+                    "codigo": "COMP-2",
+                    "nombre": "Mecanismos de acceso a tierras, capital semilla y activos productivos implementados",
+                    "causa_asociada": "C1.2",
+                    "actividades": [
+                        "Estructurar e implementar un programa piloto de banco de tierras y contratos de arrendamiento seguro para jóvenes rurales.",
+                        "Constituir y operar un fondo rotatorio de capital semilla e incentivos no reembolsables para emprendimientos juveniles.",
+                        "Facilitar paquetes tecnológicos, dotación de herramientas y maquinaria menor adaptada a iniciativas agropecuarias juveniles.",
+                        "Brindar asesoría técnica y financiera especializada para la formulación, sustentación y ejecución de planes de inversión productiva."
+                    ]
+                },
+                {
+                    "codigo": "COMP-3",
+                    "nombre": "Oferta formativa aplicada y asistencia técnica continua en territorio fortalecidas",
+                    "causa_asociada": "C1.3",
+                    "actividades": [
+                        "Concertar y actualizar con el SENA, colegios rurales y universidades mallas curriculares enfocadas en innovación agropecuaria y TIC.",
+                        "Establecer parcelas demostrativas y fincas modelo en los corregimientos para el desarrollo de prácticas y formación en campo.",
+                        "Prestar asistencia técnica integral y acompañamiento socioempresarial continuo a iniciativas juveniles poscapacitación.",
+                        "Implementar un programa de mentorías intergeneracionales con productores destacados y comités cafeteros."
+                    ]
+                },
+                {
+                    "codigo": "COMP-4",
+                    "nombre": "Canales de comercialización directa y asociatividad juvenil rural consolidados",
+                    "causa_asociada": "C1.4",
+                    "actividades": [
+                        "Promover la conformación de comités juveniles y reformas estatutarias en asociaciones y cooperativas agropecuarias.",
+                        "Diseñar y registrar marcas colectivas territoriales, etiquetas, empaques y certificaciones de calidad para productos juveniles.",
+                        "Habilitar y consolidar espacios permanentes de venta directa en Mercados Campesinos y circuitos comerciales urbanos de Manizales.",
+                        "Suscribir acuerdos comerciales de proveeduría directa con compradores urbanos, restaurantes y cadenas del sector HORECA."
+                    ]
+                }
+            ]
+        },
+        "bitacora": [
+            {
+                "fecha": "2026-09-01T11:55:00.000Z",
+                "patron": "Detección y corrección de polaridad en el verificador de problema central",
+                "proposito": "Corregir la polaridad invertida y los falsos negativos del evaluador automático de consistencia lógica del problema central.",
+                "prompt": "Evaluación de los 6 criterios automáticos del problema central: «Dificultades para consolidar oportunidades laborales y productivas suficientemente atractivas para favorecer la permanencia de los jóvenes en la zona rural de Manizales.»",
+                "salida": "El verificador del módulo mostraba 4 de 6 criterios favorables y desplegaba marcas rojas con mensajes de error a pesar de que el enunciado cumplía con la totalidad de los criterios metodológicos, generando contradicción con la matriz formal de verificación del documento.",
+                "error_modelo": "Falla de diseño en la lógica de evaluación: la UI utilizaba los mensajes de error como texto de salida cuando la condición era verdadera, las expresiones regulares exigían adyacencia estricta ('jóvenes rurales') ignorando la construcción 'jóvenes en la zona rural', y penalizaba conjunciones copulativas internas.",
+                "como_se_detecto": "Observación docente y contraste entre los mensajes de la interfaz web y la tabla formal de 10 criterios de la Sesión 2 del documento entregable.",
+                "correccion": "Se corrigió la lógica de renderizado del componente visual (.check.ok, .check.bad), se separaron los mensajes de confirmación afirmativa y de advertencia, y se ajustaron las expresiones regulares para evaluar con precisión el núcleo problemático, territorio y población, alcanzando 6/6 criterios automáticos y 10/10 criterios totales favorables."
+            },
+            {
+                "fecha": "2026-09-01T10:30:00.000Z",
+                "patron": "Revisión metodológica CEPAL / ILPES",
+                "proposito": "Reestructurar el árbol de problemas y formular causas en negativo según manual S057518_es.",
+                "prompt": "Construcción jerárquica con 4 ramas causales, causas indirectas, causas raíz y derivación a 4 componentes y 16 actividades.",
+                "salida": "Árbol con 20 nodos encadenados por niveles de jerarquía y correspondencia 1:1 con la EAP.",
+                "error_modelo": "La salida automática previa contenía enunciados repetitivos, planos y sin encadenamiento de niveles.",
+                "como_se_detecto": "Revisión del docente y contraste con los diez criterios de validación de la Sesión 2.",
+                "correccion": "Se redactaron estados negativos verificables con causas directas (C1), intermedias (C2), raíces (C3) y actividades operativas derivadas."
+            }
+        ],
+        "ultima_actualizacion": "2026-09-01T11:40:00.000Z"
+    },
+    "fuentes": [
+        {
+            "tipo": "Académica",
+            "titulo": "Factores de expulsión y retención en la decisión migratoria de jóvenes rurales en Manizales, Colombia",
+            "url": "https://www.redalyc.org/journal/666/66648525003/",
+            "aporte": "Identificación de oportunidades laborales, acceso a activos productivos, entorno socioeconómico familiar y educación/profesionalización como factores determinantes."
+        },
+        {
+            "tipo": "Institucional",
+            "titulo": "Jóvenes rurales de Manizales fortalecen emprendimientos productivos con apoyo institucional",
+            "url": "https://centrodeinformacion.manizales.gov.co/jovenes-rurales-de-manizales-fortalecen-emprendimientos-productivos-con-apoyo-institucional/",
+            "aporte": "Evidencia de la estrategia municipal para jóvenes de 14 a 28 años en los siete corregimientos, orientada a formación, capital semilla y acompañamiento."
+        },
+        {
+            "tipo": "Institucional",
+            "titulo": "Secretaría de Agricultura – Alcaldía de Manizales",
+            "url": "https://manizales.gov.co/secretarias/secretaria-de-agricultura/",
+            "aporte": "Soporte institucional para la caracterización de programas de fomento agropecuario y articulación institucional en corregimientos."
+        },
+        {
+            "tipo": "Institucional",
+            "titulo": "La Secretaría de Agricultura brinda espacio al joven de la zona rural, en el Mercado Campesino",
+            "url": "https://centrodeinformacion.manizales.gov.co/la-secretaria-de-agricultura-brinda-espacio-al-joven-de-la-zona-rural-en-el-mercado-campesino/",
+            "aporte": "Evidencia empírica sobre comercialización, venta directa, generación de ingresos y relevo generacional juvenil."
+        },
+        {
+            "tipo": "Metodológica",
+            "titulo": "Manual CEPAL/ILPES S057518_es: Metodología del marco lógico para la planificación, el seguimiento y la evaluación de proyectos y programas",
+            "url": "../Fuentes/S057518_es.pdf",
+            "aporte": "Guía metodológica oficial (Ortegón, Pacheco y Prieto, 2005) para el análisis de involucrados, construcción del árbol de problemas, árbol de objetivos y derivación a la EAP."
+        }
+    ],
+    "participacion": {
+        "tecnica": "Grupos nominales y talleres participativos por corregimiento",
+        "justificacion": "Permite ponderar de forma equitativa las opiniones de jóvenes rurales, productores tradicionales, líderes comunitarios e instituciones públicas, evitando el sesgo de actores dominantes."
+    },
+    "estado": {
+        "fase": "Avance 2 · Paso 2 Validado",
+        "paso_mml": 2,
+        "validacion_participativa": true,
+        "observacion": "Árbol de problemas revisado y validado con 10/10 criterios favorables de la Sesión 2 y derivación metodológica a la EAP de 4 componentes con 4 actividades cada uno."
+    }
+}

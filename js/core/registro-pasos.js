@@ -9,36 +9,16 @@
  * tareas de cada paso irán sustituyendo su entrada por el módulo real.
  */
 
+import paso0 from "../pasos/paso0-ficha/index.js";
+import paso1 from "../pasos/paso1-involucrados/index.js";
+import paso2 from "../pasos/paso2-problema/index.js";
 import paso3 from "../pasos/paso3-objetivos/index.js";
 import { crearPasoPendiente } from "../pasos/pasos-pendientes/index.js";
 
-const PENDIENTE = { init() {}, render() {} };
-
 export const PASOS = [
-  {
-    id: 0,
-    titulo: "Ficha del caso",
-    grupo: "Punto de partida",
-    etiquetaPaso: null,
-    vista: "views/screen00-ficha.html",
-    ...PENDIENTE
-  },
-  {
-    id: 1,
-    titulo: "Análisis de involucrados",
-    grupo: "Análisis situacional",
-    etiquetaPaso: "Paso 1",
-    vista: "views/screen01-involucrados.html",
-    ...PENDIENTE
-  },
-  {
-    id: 2,
-    titulo: "Análisis del problema",
-    grupo: "Análisis situacional",
-    etiquetaPaso: "Paso 2",
-    vista: "views/screen02-problema.html",
-    ...PENDIENTE
-  },
+  paso0,
+  paso1,
+  paso2,
   paso3,
   crearPasoPendiente({
     id: 4,

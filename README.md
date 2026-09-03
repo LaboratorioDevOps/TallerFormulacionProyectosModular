@@ -84,7 +84,7 @@ trabajo futuro, fuera del alcance de este plan.
 | 2 | Dos elementos con `id="problemPopulation"`: un `<input>` en la subpantalla «Contexto» y un `<textarea>` en «Enunciado». `getElementById` devolvía siempre el primero, así que lo que el usuario escribía en el textarea del enunciado central nunca llegaba al estado ni se validaba | 9592, 9645, 9671, 9808 (uso del id duplicado en la subpantalla «Enunciado») | El textarea de «Enunciado» pasa a `id="problemCentralPopulation"` en `views/screen02-problema.html`; `enunciado.js` referencia el nuevo id. El input de «Contexto» conserva `problemPopulation` sin cambios |
 | 3 | `continuarAlPaso3()` comprobaba `typeof syncObjectivesFromProblemNodes === "function"` sobre una función privada de un IIFE: la condición era siempre falsa, la sincronización de objetivos nunca se ejecutaba, sin ningún error visible | 6842-6874 (`continuarAlPaso3`), 7045-7100 (`syncObjectivesFromProblemNodes`) | `syncObjectivesFromProblemNodes` se exporta desde `paso3-objetivos/sincronizacion.js` y `paso3-objetivos/index.js` la importa e invoca directamente, sin `typeof`: un import roto falla de forma visible al cargar el módulo, nunca en silencio |
 | 4 | `renderTechniqueHelp` estaba definida dos veces, con cuerpos idénticos byte a byte; la segunda definición pisaba a la primera | 9253-9319 y 9322-9388 | Una sola definición, en `paso1-involucrados/tecnicas.js` |
-| 5 | Un `<div class="card">` sin cerrar en la pantalla de involucrados dejaba `.wizard-actions` anidado dentro de la tarjeta en vez de ser hermano de ella | 3464 (aprox., bloque de la pantalla de involucrados) | Corregido al extraer `views/screen01-involucrados.html` como parcial independiente |
+| 5 | Un `<div class="card">` sin cerrar en la pantalla de involucrados dejaba `.wizard-actions` anidado dentro de la tarjeta en vez de ser hermano de ella | 3464 (apertura del `<div class="card">` sin cerrar); 3720 (`.wizard-actions` mal anidado) | Corregido al extraer `views/screen01-involucrados.html` como parcial independiente |
 
 Números de línea referidos a
 `ArtefactoUnal/artefacto_MML_esqueleto_11_pantallas.html`, que se conserva
@@ -94,24 +94,28 @@ intacto como referencia.
 
 Durante la migración se detectó un sexto defecto en el artefacto original,
 fuera del alcance de los 5 defectos que esta spec pedía corregir. Se
-documenta pero **no se corrige**, y se migró literalmente igual que en el
-original:
+documentó inicialmente sin corregir; una revisión final de rama lo marcó
+como Importante y sí se corrigió (`js/pasos/paso2-problema/contexto.js`):
 
 - En el módulo de análisis del problema, `renderProblemContext`
   (`js/pasos/paso2-problema/contexto.js`, función original en ORIG
   6399-6450) y `generateProblemPrompt`
-  (`js/pasos/paso2-problema/prompts.js`, original en ORIG 11315-11747) leen
-  `problema.cond` y `problema.delim`. Ninguna parte del código —original ni
-  migrado— escribe esas claves: quien escribe el estado del problema
-  (`enunciado.js`, función `confirmCentralProblem`) usa
+  (`js/pasos/paso2-problema/prompts.js`, original en ORIG 11315-11747)
+  leían `problema.cond` y `problema.delim`. Ninguna parte del código
+  —original ni migrado— escribe esas claves: quien escribe el estado del
+  problema (`enunciado.js`, función `confirmCentralProblem`) usa
   `estado.problema.condicion` y `estado.problema.delimitacion`. En
   `generateProblemPrompt` el efecto es inocuo porque el propio código
   intenta primero `problema.condicion` y solo cae a `problema.cond` como
   respaldo (`problema.condicion || problema.cond || ""`); pero en
-  `renderProblemContext`, que solo lee `problema.cond` / `problema.delim`
-  sin ese respaldo, los campos de condición y delimitación de la
-  subpantalla «Contexto» quedan permanentemente vacíos aunque el usuario
-  ya haya completado el enunciado central del problema.
+  `renderProblemContext`, que solo leía `problema.cond` / `problema.delim`
+  sin ese respaldo, los campos de condición y delimitación quedaban
+  permanentemente vacíos. Esos campos (`problemCondition`,
+  `problemDelimitation`) están físicamente en la subpantalla «Enunciado»,
+  no en «Contexto»: comparten id con los del enunciado central, y es
+  `renderProblemContext` —invocada en cada `render()` del Paso 2— quien los
+  repuebla. Corregido cambiando las claves leídas a `problema.condicion` /
+  `problema.delimitacion`.
 
 ## Limitaciones conocidas
 

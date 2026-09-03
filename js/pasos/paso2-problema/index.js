@@ -16,7 +16,7 @@
 import { irAPantalla } from "../../core/router.js";
 import { copiarDesdeElemento } from "../../utils/portapapeles.js";
 import { prepararPaso2, renderProblemContext } from "./contexto.js";
-import { enlazarCamposCentrales, validateCentralProblem, confirmCentralProblem } from "./enunciado.js";
+import { enlazarCamposCentrales, validateCentralProblem, confirmCentralProblem, repoblarCamposCentrales } from "./enunciado.js";
 import { refreshNodeParentOptions, addProblemNode, deleteProblemNode, renderProblemNodes } from "./nodos.js";
 import { renderProblemTree } from "./arbol-svg.js";
 import { renderNodeEvidence } from "./evidencia.js";
@@ -40,6 +40,7 @@ function mostrarSubpantalla(nombre, boton) {
 function render() {
   prepararPaso2();
   renderProblemContext();
+  repoblarCamposCentrales();
   renderProblemNodes();
   renderProblemTree();
   renderNodeEvidence();

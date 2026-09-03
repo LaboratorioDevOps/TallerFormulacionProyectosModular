@@ -76,6 +76,29 @@ const CAMPOS_CENTRALES = {
   problemDelimitation: "delimitacion"
 };
 
+/**
+ * Repuebla, tras reinyectar el parcial del Paso 2, los campos que
+ * `renderProblemContext` (contexto.js) no cubre: el textarea
+ * `problemCentralPopulation` (id exclusivo de esta subpantalla, ver
+ * defecto 2) y el enunciado compuesto `problemStatement`. Los otros tres
+ * campos del enunciado central (`problemCondition`, `problemAttribute`,
+ * `problemDelimitation`) comparten id con la subpantalla «Contexto» y ya
+ * los repuebla `renderProblemContext`; repetirlo aquí sería redundante.
+ */
+export function repoblarCamposCentrales() {
+  const problema = obtenerEstado().problema || {};
+
+  const population = document.getElementById("problemCentralPopulation");
+  if (population) {
+    population.value = problema.poblacion || "";
+  }
+
+  const statement = document.getElementById("problemStatement");
+  if (statement) {
+    statement.value = problema.enunciado || "";
+  }
+}
+
 export function enlazarCamposCentrales(raiz, alCambiar) {
   raiz.addEventListener("input", (evento) => {
     const clave = CAMPOS_CENTRALES[evento.target.id];

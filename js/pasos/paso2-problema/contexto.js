@@ -11,6 +11,17 @@
  * input `problemPopulation` de esta subpantalla (Contexto); ese `id` NO
  * cambia, a diferencia del textarea homónimo de la subpantalla «Enunciado»
  * (ver enunciado.js, defecto 2).
+ *
+ * Corrección (revisión final, IMPORTANTE 1): `renderProblemContext` leía
+ * `problema.cond` / `problema.delim`, claves que nadie escribe (la única
+ * escritura real, en enunciado.js, usa `problema.condicion` /
+ * `problema.delimitacion`), así que `problemCondition` y
+ * `problemDelimitation` quedaban vacíos en cada render. Se corrigen las
+ * claves aquí. Nótese que `problemCondition`, `problemAttribute` y
+ * `problemDelimitation` son los MISMOS ids que usa la subpantalla
+ * «Enunciado» (ver enunciado.js) — con esta corrección basta un solo
+ * sitio; enunciado.js solo repuebla `problemCentralPopulation` y
+ * `problemStatement`, que no se solapan con esta función.
  */
 
 import { obtenerEstado, notificarCambio } from "../../core/estado.js";
@@ -230,13 +241,13 @@ export function renderProblemContext() {
       caso.situacion || "",
 
     problemCondition:
-      problema.cond || "",
+      problema.condicion || "",
 
     problemAttribute:
       problema.atributo || "",
 
     problemDelimitation:
-      problema.delim || ""
+      problema.delimitacion || ""
 
   };
 

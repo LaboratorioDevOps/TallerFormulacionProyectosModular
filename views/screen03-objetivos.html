@@ -1,0 +1,449 @@
+        <section class="screen" id="screen3">
+
+          <!-- ENCABEZADO -->
+          <div class="hero">
+            <div class="kicker">Paso 3 · Análisis de objetivos</div>
+
+            <div class="hero-row">
+              <div>
+                <h2>Análisis de objetivos</h2>
+                <p>
+                  Convierte el árbol de problemas en un árbol de objetivos,
+                  identifica medios y fines, formula acciones y compara
+                  alternativas de solución.
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- RUTA INTERNA DEL PASO 3 -->
+          <div class="card">
+
+            <div class="section-head">
+              <div>
+                <h3>Ruta de trabajo</h3>
+                <p>
+                  El análisis de objetivos se desarrolla progresivamente.
+                  Las propuestas generadas por el sistema siempre requieren
+                  revisión del formulador.
+                </p>
+              </div>
+            </div>
+
+            <div class="step3-nav">
+
+              <button type="button" class="step3-tab active"
+                data-accion="p3:subpantalla" data-subpantalla="transformacion">
+                1. Transformación
+              </button>
+
+              <button type="button" class="step3-tab"
+                data-accion="p3:subpantalla" data-subpantalla="arbol">
+                2. Árbol de objetivos
+              </button>
+
+              <button type="button" class="step3-tab"
+                data-accion="p3:subpantalla" data-subpantalla="validacion">
+                3. Validación
+              </button>
+
+              <button type="button" class="step3-tab"
+                data-accion="p3:subpantalla" data-subpantalla="acciones">
+                4. Acciones
+              </button>
+
+              <button type="button" class="step3-tab"
+                data-accion="p3:subpantalla" data-subpantalla="alternativas">
+                5. Alternativas
+              </button>
+
+              <button type="button" class="step3-tab"
+                data-accion="p3:subpantalla" data-subpantalla="evaluacion">
+                6. Evaluación
+              </button>
+
+              <button type="button" class="step3-tab"
+                data-accion="p3:subpantalla" data-subpantalla="seleccion">
+                7. Selección
+              </button>
+
+            </div>
+
+          </div>
+
+
+          <!-- =====================================================
+       3.1 TRANSFORMACIÓN
+       ===================================================== -->
+          <div class="objective-subscreen active" id="objectiveSubscreen-transformacion">
+
+            <div class="card">
+
+              <div class="section-head">
+                <div>
+                  <h3>1. Transformación de problemas en objetivos</h3>
+                  <p>
+                    Cada nodo del árbol de problemas se transforma en un
+                    estado positivo deseado. La propuesta es editable y
+                    no constituye una decisión automática.
+                  </p>
+                </div>
+              </div>
+
+              <div id="objectiveTransformationWorkspace"></div>
+
+            </div>
+
+
+            <div class="card">
+
+              <div class="section-head">
+                <div>
+                  <h3>Supuestos potenciales</h3>
+                  <p>
+                    Un objetivo puede marcarse como posible supuesto para
+                    revisión posterior. El sistema no decide cuáles deben
+                    ser supuestos.
+                  </p>
+                </div>
+              </div>
+
+              <div id="potentialAssumptionsWorkspace"></div>
+
+            </div>
+
+          </div>
+
+
+          <!-- =====================================================
+       3.2 ÁRBOL DE OBJETIVOS
+       ===================================================== -->
+          <div class="objective-subscreen" id="objectiveSubscreen-arbol">
+
+            <div class="card">
+
+              <div class="section-head">
+                <div>
+                  <h3>2. Árbol de objetivos</h3>
+                  <p>
+                    Representación gráfica de la transformación del árbol
+                    de problemas en una estructura de medios y fines.
+                  </p>
+                </div>
+              </div>
+
+              <div id="objectiveTreeWorkspace">
+
+                <div class="notice">
+                  El árbol de objetivos se visualizará aquí a partir
+                  de los nodos transformados.
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- =====================================================
+       3.3 VALIDACIÓN
+       ===================================================== -->
+          <div class="objective-subscreen" id="objectiveSubscreen-validacion">
+
+            <div class="card">
+
+              <div class="section-head">
+                <div>
+                  <h3>3. Validación metodológica</h3>
+                  <p>
+                    Revisa la consistencia de la transformación y de la
+                    estructura medios-fines.
+                  </p>
+                </div>
+              </div>
+
+              <div id="objectiveValidationWorkspace">
+
+                <div class="notice">
+                  Se ejecutarán cinco pruebas sobre el árbol de objetivos:
+                  correspondencia, signo, lógica medios-fines, no solución
+                  y suficiencia.
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- =====================================================
+       3.4 ACCIONES
+       ===================================================== -->
+          <div class="objective-subscreen" id="objectiveSubscreen-acciones">
+
+            <div class="card">
+
+              <div class="section-head">
+                <div>
+                  <h3>4. Identificación de acciones</h3>
+                  <p>
+                    Identifica acciones asociadas a los medios
+                    operacionalizables y verifica su relación causal.
+                  </p>
+                </div>
+              </div>
+
+              <div id="actionsWorkspace">
+
+                <div class="notice">
+                  Los medios operacionalizables y sus acciones
+                  aparecerán aquí.
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="card">
+
+              <div class="section-head">
+                <div>
+                  <h3>Cadena de trazabilidad</h3>
+                  <p>
+                    Cada acción debe poder relacionarse con el medio,
+                    la causa y el problema central.
+                  </p>
+                </div>
+              </div>
+
+              <div id="actionTraceabilityWorkspace">
+
+                <div class="notice">
+                  La cadena acción → medio → causa → problema
+                  se verificará aquí.
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- =====================================================
+       3.5 ALTERNATIVAS
+       ===================================================== -->
+          <div class="objective-subscreen" id="objectiveSubscreen-alternativas">
+
+            <div class="card">
+
+              <div class="section-head">
+                <div>
+                  <h3>5. Configuración de alternativas</h3>
+                  <p>
+                    Clasifica las acciones y construye las alternativas
+                    de solución a partir de sus relaciones.
+                  </p>
+                </div>
+              </div>
+
+              <div id="actionClassificationWorkspace">
+
+                <div class="notice">
+                  Aquí se clasificará cada acción como
+                  complementaria o excluyente.
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="card">
+
+              <div class="section-head">
+                <div>
+                  <h3>Alternativas configuradas</h3>
+                  <p>
+                    El núcleo común estará conformado por acciones
+                    complementarias. Cada decisión excluyente abrirá
+                    una rama alternativa.
+                  </p>
+                </div>
+              </div>
+
+              <div id="alternativesWorkspace">
+
+                <div class="notice">
+                  Aún no se han configurado alternativas.
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- =====================================================
+       3.6 EVALUACIÓN
+       ===================================================== -->
+          <div class="objective-subscreen" id="objectiveSubscreen-evaluacion">
+
+            <div class="card">
+
+              <div class="section-head">
+                <div>
+                  <h3>6. Evaluación de alternativas</h3>
+                  <p>
+                    Compara las alternativas mediante criterios y pesos
+                    editables. La escala de valoración será de 1 a 5.
+                  </p>
+                </div>
+              </div>
+
+              <div id="alternativeEvaluationWorkspace">
+
+                <div class="notice">
+                  La matriz de evaluación aparecerá cuando existan
+                  alternativas configuradas.
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="card">
+
+              <div class="section-head">
+                <div>
+                  <h3>Sensibilidad</h3>
+                  <p>
+                    Revisa el comportamiento de la comparación ante
+                    variaciones de ±0,10 en los pesos.
+                  </p>
+                </div>
+              </div>
+
+              <div id="sensitivityWorkspace">
+
+                <div class="notice">
+                  La sensibilidad se calculará a partir de los pesos
+                  definidos por el formulador.
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- =====================================================
+       3.7 SELECCIÓN
+       ===================================================== -->
+          <div class="objective-subscreen" id="objectiveSubscreen-seleccion">
+
+            <div class="card">
+
+              <div class="section-head">
+                <div>
+                  <h3>7. Selección de la estrategia óptima</h3>
+                  <p>
+                    Documenta la alternativa seleccionada por el
+                    formulador y las razones que sustentan la decisión.
+                  </p>
+                </div>
+              </div>
+
+              <div class="notice">
+                <strong>Decisión humana:</strong>
+                el sistema calcula y presenta resultados comparativos,
+                pero no selecciona automáticamente la estrategia.
+              </div>
+
+              <div id="strategySelectionWorkspace" style="margin-top:16px">
+
+                <div class="notice">
+                  Las alternativas disponibles aparecerán aquí para
+                  documentar la decisión.
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="card">
+
+              <div class="section-head">
+                <div>
+                  <h3>Justificación de la selección</h3>
+                  <p>
+                    Registra los argumentos utilizados para seleccionar
+                    la estrategia.
+                  </p>
+                </div>
+              </div>
+
+              <div class="field">
+
+                <label for="strategySelectionJustification">
+                  Justificación
+                </label>
+
+                <textarea id="strategySelectionJustification"
+                  placeholder="Explica por qué se selecciona la alternativa."></textarea>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- NOTA METODOLÓGICA -->
+          <div class="notice" style="margin-top:18px">
+
+            <strong>Nota metodológica:</strong>
+            las transformaciones, acciones y resultados generados
+            automáticamente se consideran propuestas y deben ser
+            revisados por el formulador. El sistema no decide medios,
+            supuestos, pesos ni estrategia.
+
+          </div>
+
+
+          <!-- =====================================================
+              TRANSICIÓN · MÓDULO 3 → MÓDULO 4
+              ===================================================== -->
+
+          <div class="wizard-actions module-transition">
+
+            <div class="module-transition-text">
+
+              <strong>
+                Análisis de objetivos completado
+              </strong>
+
+              <span>
+                El árbol de objetivos alimentará la selección
+                de la estrategia óptima.
+              </span>
+
+            </div>
+
+            <button type="button" class="btn primary" data-accion="continuar-paso4">
+
+              Continuar a la selección de estrategia →
+
+            </button>
+
+          </div>
+
+        </section>

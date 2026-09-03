@@ -1,0 +1,527 @@
+        <section class="screen" id="screen1">
+
+          <div class="hero">
+            <div class="kicker">Paso 1</div>
+            <h2>Análisis de involucrados</h2>
+            <p>
+              Identifica los grupos y organizaciones relacionados con el problema,
+              analiza sus intereses, problemas percibidos, recursos y mandatos,
+              y caracteriza su posición, fuerza e intensidad.
+            </p>
+          </div>
+
+          <!-- FORMULARIO -->
+          <div class="card">
+            <h3 id="actorFormTitle">Registrar involucrado</h3>
+
+            <div class="actor-form-grid">
+
+              <div class="actor-field">
+                <label for="actorGrupo">Cargo u organización *</label>
+                <input id="actorGrupo" type="text" placeholder="Ej. Alcaldía municipal / Asociación de productores">
+                <small>
+                  Registre únicamente cargos, grupos u organizaciones. No registre
+                  nombres de personas naturales ni datos de contacto.
+                </small>
+              </div>
+
+              <div class="actor-field">
+                <label for="actorNaturaleza">Naturaleza *</label>
+                <select id="actorNaturaleza">
+                  <option value="">Seleccione</option>
+                  <option value="Comunitaria">Comunitaria</option>
+                  <option value="Institucional">Institucional</option>
+                  <option value="Productiva">Productiva</option>
+                  <option value="Educativa">Educativa</option>
+                  <option value="Social">Social</option>
+                  <option value="Privada">Privada</option>
+                  <option value="Financiera">Financiera</option>
+                  <option value="Gremial">Gremial</option>
+                  <option value="Otra">Otra</option>
+                </select>
+              </div>
+
+              <div class="actor-field">
+                <label for="actorRelacion">Relación con el problema *</label>
+                <input id="actorRelacion" type="text" placeholder="Ej. Afectado directamente por el problema">
+              </div>
+
+              <div class="actor-field">
+                <label for="actorRol">Rol frente al problema *</label>
+                <input id="actorRol" type="text" placeholder="Ej. Beneficiario, regulador, financiador">
+              </div>
+
+              <div class="actor-field full">
+                <label for="actorIntereses">
+                  Intereses en relación directa con el problema *
+                </label>
+                <textarea id="actorIntereses"
+                  placeholder="¿Qué busca, necesita o espera este grupo frente al problema?"></textarea>
+              </div>
+
+              <div class="actor-field full">
+                <label for="actorProblemas">
+                  Problemas percibidos *
+                </label>
+                <textarea id="actorProblemas"
+                  placeholder="Escriba un problema por línea, desde la perspectiva del grupo y en negativo."></textarea>
+                <small>
+                  Cada línea se convertirá en un elemento independiente de la lista.
+                </small>
+              </div>
+
+              <div class="actor-field full">
+                <label for="actorRecursos">
+                  Recursos y mandatos *
+                </label>
+                <textarea id="actorRecursos"
+                  placeholder="Recursos disponibles, capacidades, competencias, normas o mandatos institucionales."></textarea>
+              </div>
+
+              <div class="actor-field">
+                <label for="actorPosicion">Posición *</label>
+                <select id="actorPosicion">
+                  <option value="">Seleccione</option>
+                  <option value="1">+1 · A favor</option>
+                  <option value="0">0 · Neutral / indiferente</option>
+                  <option value="-1">−1 · En contra</option>
+                </select>
+              </div>
+
+              <div class="actor-field">
+                <label for="actorFuerza">Fuerza / poder (1–5) *</label>
+                <select id="actorFuerza">
+                  <option value="">Seleccione</option>
+                  <option value="1">1 · Muy baja</option>
+                  <option value="2">2 · Baja</option>
+                  <option value="3">3 · Media</option>
+                  <option value="4">4 · Alta</option>
+                  <option value="5">5 · Muy alta</option>
+                </select>
+                <small>
+                  Dimensión de poder o capacidad de influencia. No se promedia con el interés.
+                </small>
+              </div>
+
+              <div class="actor-field">
+                <label for="actorIntensidad">Intensidad / interés (1–5) *</label>
+                <select id="actorIntensidad">
+                  <option value="">Seleccione</option>
+                  <option value="1">1 · Muy baja</option>
+                  <option value="2">2 · Baja</option>
+                  <option value="3">3 · Media</option>
+                  <option value="4">4 · Alta</option>
+                  <option value="5">5 · Muy alta</option>
+                </select>
+                <small>
+                  Dimensión de interés o afectación. No se promedia con el poder.
+                </small>
+              </div>
+
+              <div class="actor-field full">
+                <label for="actorRazon">Razón de la valoración *</label>
+                <textarea id="actorRazon"
+                  placeholder="Justifique la posición, la fuerza y la intensidad asignadas."></textarea>
+              </div>
+
+              <div class="actor-field full">
+                <label for="actorEstrategia">Estrategia de relacionamiento *</label>
+                <textarea id="actorEstrategia"
+                  placeholder="Describa cómo se gestionará la relación con este grupo."></textarea>
+              </div>
+
+            </div>
+
+            <div class="actor-actions">
+              <button type="button" class="btn" id="actorCancelBtn" style="display:none;" data-accion="limpiar-actor">
+                Cancelar edición
+              </button>
+
+              <button type="button" class="btn btn-primary" id="actorSaveBtn" data-accion="guardar-actor">
+                Agregar involucrado
+              </button>
+            </div>
+          </div>
+
+          <!-- VALIDACIONES METODOLÓGICAS -->
+          <div class="card method-layer">
+            <div class="validation-panel">
+
+              <div class="validation-header">
+                <h3>Validaciones metodológicas</h3>
+                <span id="validationCount" class="validation-count">
+                  Sin hallazgos
+                </span>
+              </div>
+
+              <div id="actorValidations" class="validation-list">
+              </div>
+
+            </div>
+          </div>
+
+          <!-- SALIDA PRINCIPAL -->
+          <div class="card">
+            <h3>Cuadro de análisis de involucrados</h3>
+
+            <p class="footer-note" style="margin-top:6px;">
+              El cuadro conserva exactamente las cuatro columnas requeridas.
+              Los problemas percibidos se presentan como lista, uno por línea.
+            </p>
+
+            <div class="actor-table-wrap">
+              <table class="actor-table">
+                <thead>
+                  <tr>
+                    <th>Grupos</th>
+                    <th>Intereses</th>
+                    <th>Problemas percibidos</th>
+                    <th>Recursos y mandatos</th>
+                  </tr>
+                </thead>
+                <tbody id="actorsMainTableBody">
+                  <tr>
+                    <td colspan="4" class="actor-empty">
+                      Aún no hay involucrados registrados.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- SALIDA SECUNDARIA -->
+          <div class="card">
+            <h3>Caracterización y priorización</h3>
+
+            <p class="footer-note" style="margin-top:6px;">
+              La resultante se calcula en cada actualización como
+              <strong>fuerza × intensidad × posición</strong>.
+              No se almacena como dato del involucrado.
+            </p>
+
+            <div class="actor-table-wrap">
+              <table class="characterization-table">
+                <thead>
+                  <tr>
+                    <th>Grupos</th>
+                    <th>Posición</th>
+                    <th>Fuerza / poder</th>
+                    <th>Intensidad / interés</th>
+                    <th>Resultante</th>
+                    <th>Cuadrante</th>
+                    <th>Razón de la valoración</th>
+                    <th>Estrategia</th>
+                    <th>Acciones</th>
+                  </tr>
+                </thead>
+                <tbody id="actorsCharacterizationBody">
+                  <tr>
+                    <td colspan="9" class="actor-empty">
+                      Aún no hay involucrados registrados.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="validation-note">
+              <strong>Regla metodológica:</strong>
+              poder e interés son dimensiones distintas. La fuerza representa el
+              poder/capacidad de influencia y la intensidad representa el interés o
+              afectación. No se promedian. La resultante únicamente se calcula
+              cuando se necesita para ordenar la caracterización.
+            </div>
+          </div>
+          <!-- REPRESENTACIONES GRÁFICAS -->
+          <div class="card">
+            <h3>Representaciones gráficas</h3>
+            <p class="footer-note" style="margin-top:6px;">
+              Las representaciones se generan automáticamente a partir de los
+              involucrados registrados y se actualizan cada vez que cambia la lista.
+            </p>
+
+            <!-- MAPA DE INVOLUCRADOS -->
+            <div class="section-head">
+              <div>
+                <h3>Mapa de involucrados</h3>
+                <p>
+                  Relación de los grupos involucrados con el proyecto,
+                  agrupados por naturaleza.
+                </p>
+              </div>
+            </div>
+
+
+            <div class="actor-chart-wrapper">
+              <svg id="interestPowerChart" class="actor-svg" viewBox="0 0 760 540" role="img"
+                aria-label="Matriz de interés y poder de los involucrados">
+              </svg>
+            </div>
+          </div>
+
+
+          <!-- DIAGRAMA DE INVOLUCRADOS -->
+          <div class="card">
+            <div class="section-head">
+              <div>
+                <h3>Diagrama de involucrados</h3>
+                <p>
+                  Relación de los grupos involucrados con el proyecto,
+                  agrupados por proyecto.
+                </p>
+              </div>
+
+              <div class="actor-chart-wrapper">
+                <svg id="stakeholderNetworkChart" class="actor-svg" viewBox="0 0 760 540" role="img"
+                  aria-label="Diagrama de involucrados alrededor del proyecto">
+                </svg>
+              </div>
+            </div>
+            <!-- ACTIVIDAD 4 · PARTICIPACIÓN CON INVOLUCRADOS -->
+            <div class="card method-layer">
+
+              <div class="hero" style="margin-bottom:18px;">
+                <div class="kicker">Actividad 4 · Paso 1</div>
+                <h3 style="margin:0 0 7px;font-size:19px;">
+                  Identificación, análisis y selección con los involucrados
+                </h3>
+                <p style="margin:0;font-size:13px;">
+                  Selecciona una técnica de participación y justifica su uso a partir
+                  de la caracterización de los involucrados.
+                </p>
+              </div>
+
+              <div class="participation-grid">
+
+                <div class="participation-selection">
+
+                  <label for="participationTechnique">
+                    Técnica seleccionada *
+                  </label>
+
+                  <select id="participationTechnique">
+                    <option value="">
+                      Seleccione una técnica
+                    </option>
+                    <option value="grupos_nominales">
+                      Grupos nominales
+                    </option>
+                    <option value="delphi">
+                      Delphi
+                    </option>
+                    <option value="easw">
+                      EASW
+                    </option>
+                    <option value="nucleos_intervencion">
+                      Núcleos de intervención participativa
+                    </option>
+                  </select>
+
+                  <label for="participationActors">
+                    Involucrados convocados *
+                  </label>
+
+                  <textarea id="participationActors"
+                    placeholder="Indique los grupos u organizaciones que participarían."></textarea>
+
+                  <label for="participationMoment">
+                    Momento de aplicación *
+                  </label>
+
+                  <input id="participationMoment" type="text" placeholder="Ej. Validación del problema y priorización">
+
+                  <label for="participationProduct">
+                    Producto esperado *
+                  </label>
+
+                  <textarea id="participationProduct"
+                    placeholder="¿Qué producto concreto se espera obtener?"></textarea>
+
+                  <label for="participationLimitations">
+                    Limitaciones previstas
+                  </label>
+
+                  <textarea id="participationLimitations"
+                    placeholder="Condiciones que podrían limitar la técnica en este caso."></textarea>
+
+                </div>
+
+                <div id="techniqueHelp" class="participation-help">
+
+                  <h4>Ayuda contextual</h4>
+
+                  <p style="font-size:12px;color:var(--gris-500);">
+                    Seleccione una técnica para consultar su procedimiento,
+                    participantes, duración y cuándo evitarla.
+                  </p>
+
+                </div>
+
+              </div>
+
+              <div class="participation-justification">
+                <label for="participationJustification">
+                  Justificación de la elección
+                </label>
+
+                <textarea id="participationJustification"
+                  placeholder="Justifique en función de la fuerza, intensidad, posición, intereses y limitaciones de los involucrados."></textarea>
+              </div>
+
+              <div class="participation-note">
+                <strong>Regla metodológica:</strong>
+                la técnica no se selecciona automáticamente. El artefacto puede
+                mostrar información contextual, pero la decisión sobre qué técnica
+                utilizar, con quién, cuándo y para qué producto corresponde al
+                formulador.
+              </div>
+            </div>
+            <!-- INSTRUCCIONES PARA IA -->
+            <div class="card method-layer">
+
+              <div class="hero" style="margin-bottom:18px;">
+                <div class="kicker">Uso de inteligencia artificial</div>
+                <h3 style="margin:0 0 7px;font-size:19px;">
+                  Instrucciones para IA
+                </h3>
+                <p style="margin:0;font-size:13px;">
+                  Utilice estas instrucciones como apoyo para revisar el análisis,
+                  no para delegar las decisiones metodológicas.
+                </p>
+              </div>
+
+              <details class="ai-panel">
+                <summary>
+                  Instrucción 1 · Revisión crítica del análisis de involucrados
+                </summary>
+
+                <div class="ai-content">
+                  <p>
+                    Utilice esta instrucción para solicitar una revisión metodológica
+                    del cuadro sin permitir que la IA invente actores o tome decisiones.
+                  </p>
+
+                  <div class="ai-prompt-box">
+                    <pre id="aiPrompt1"
+                      class="ai-prompt">Actúa como revisor metodológico de un análisis de involucrados basado en la Metodología de Marco Lógico CEPAL/ILPES.
+
+          Revisa exclusivamente la información que te proporcione.
+
+          Identifica:
+          1. posibles grupos omitidos;
+          2. problemas percibidos formulados en positivo;
+          3. problemas percibidos formulados como soluciones o como ausencia de una solución;
+          4. intereses que no tengan relación directa con el problema;
+          5. valoraciones de posición, fuerza e intensidad que carezcan de justificación;
+          6. posibles inconsistencias entre poder e interés;
+          7. grupos demasiado amplios que deban desagregarse.
+
+          NO inventes involucrados.
+          NO inventes intereses, problemas, recursos ni mandatos.
+          NO modifiques posición, fuerza o intensidad.
+          NO selecciones la estrategia de relacionamiento por el formulador.
+
+          Entrega únicamente hallazgos y preguntas de revisión. Marca toda propuesta como propuesta de IA, con confianza baja y sin evidencia propia.</pre>
+
+                    <button type="button" class="ai-copy-btn" data-accion="p1:copiar-prompt" data-prompt="aiPrompt1">
+                      Copiar
+                    </button>
+                  </div>
+                </div>
+              </details>
+
+              <details class="ai-panel" style="margin-top:10px;">
+                <summary>
+                  Instrucción 2 · Revisión de problemas percibidos
+                </summary>
+
+                <div class="ai-content">
+                  <p>
+                    Utilice esta instrucción para contrastar la redacción de los
+                    problemas percibidos sin convertirlos automáticamente en causas.
+                  </p>
+
+                  <div class="ai-prompt-box">
+                    <pre id="aiPrompt2" class="ai-prompt">Revisa los siguientes problemas percibidos por involucrados.
+
+          Para cada uno indica:
+          - si está formulado como estado negativo;
+          - si está formulado en positivo;
+          - si está formulado como una solución;
+          - si está expresado como ausencia de una solución;
+          - si parece demasiado general;
+          - si requiere mayor precisión.
+
+          No reescribas automáticamente los problemas.
+          No los conviertas en causas del árbol.
+          No inventes información.
+
+          Presenta las observaciones como recomendaciones que el formulador debe validar.</pre>
+
+                    <button type="button" class="ai-copy-btn" data-accion="p1:copiar-prompt" data-prompt="aiPrompt2">
+                      Copiar
+                    </button>
+                  </div>
+                </div>
+              </details>
+
+              <details class="ai-panel" style="margin-top:10px;">
+                <summary>
+                  Instrucción 3 · Preparación de la Actividad 4
+                </summary>
+
+                <div class="ai-content">
+                  <p>
+                    Utilice esta instrucción para recibir una comparación de las
+                    técnicas sin delegar la decisión.
+                  </p>
+
+                  <div class="ai-prompt-box">
+                    <pre id="aiPrompt3" class="ai-prompt">Actúa como apoyo para preparar la Actividad 4 del Paso 1 de la Metodología de Marco Lógico.
+
+          Con base únicamente en la caracterización de los involucrados que te proporcione:
+
+          1. describe qué ventajas y limitaciones tendría cada técnica disponible;
+          2. relaciona cada técnica con los tipos de involucrados y la situación identificada;
+          3. señala qué información adicional necesitaría el formulador para decidir;
+          4. presenta alternativas de decisión, sin escoger una por él.
+
+          Las técnicas a considerar son:
+          - Grupos nominales.
+          - Delphi.
+          - EASW.
+          - Núcleos de intervención participativa.
+
+          NO selecciones la técnica.
+          NO inventes participantes.
+          NO inventes datos del caso.
+          NO inventes evidencia.
+          Toda recomendación debe quedar marcada como propuesta de IA, con confianza baja.</pre>
+
+                    <button type="button" class="ai-copy-btn" data-accion="p1:copiar-prompt" data-prompt="aiPrompt3">
+                      Copiar
+                    </button>
+                  </div>
+                </div>
+              </details>
+
+              <div class="ai-responsible-note">
+                <strong>Uso responsable de la IA:</strong>
+                la inteligencia artificial se utiliza como apoyo para revisar,
+                comparar y formular propuestas. El criterio metodológico y las
+                decisiones finales pertenecen al formulador. No introduzca en
+                herramientas de IA nombres de personas naturales, números de
+                identificación, teléfonos, correos electrónicos ni otros datos
+                personales. El artefacto mantiene esta prohibición como regla
+                permanente, en concordancia con la Ley 1581 de 2012.
+              </div>
+
+            </div>
+            </div>
+            <div class="wizard-actions">
+              <button type="button" class="btn primary" data-accion="continuar-paso2">
+                Continuar al análisis del problema →
+              </button>
+            </div>
+        </section>

@@ -1,0 +1,319 @@
+/* =========================================================
+   PASO 2 · ANÁLISIS DEL PROBLEMA
+   Navegación y subpantallas internas
+   ========================================================= */
+
+/* Navegación interna del Paso 2 */
+.step2-nav {
+      display: grid;
+      grid-template-columns: repeat(7, minmax(110px, 1fr));
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+.step2-tab {
+      border: 1px solid #d7dce2;
+      background: #f7f8fa;
+      color: #4b5563;
+      border-radius: 8px;
+      padding: 11px 10px;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 1.3;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+.step2-tab:hover {
+      background: #eef1f4;
+      border-color: #c5ccd5;
+    }
+
+.step2-tab.active {
+      background: #1f2937;
+      color: #ffffff;
+      border-color: #1f2937;
+    }
+
+/* Subpantallas del Paso 2 */
+.problem-subscreen {
+      display: none;
+      margin-top: 18px;
+    }
+
+.problem-subscreen.active {
+      display: block;
+    }
+
+/* Encabezados internos */
+.problem-subscreen .section-head {
+      margin-bottom: 18px;
+    }
+
+.problem-subscreen .section-head h3 {
+      margin-bottom: 5px;
+    }
+
+/* Distribución de campos */
+.problem-subscreen .grid {
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+.problem-subscreen .span-4 {
+      grid-column: span 4;
+    }
+
+.problem-subscreen .span-6 {
+      grid-column: span 6;
+    }
+
+.problem-subscreen .span-12 {
+      grid-column: span 12;
+    }
+
+/* Tarjetas internas */
+.problem-subscreen .card .card {
+      margin-top: 0;
+      box-shadow: none;
+    }
+
+/* Áreas de texto */
+.problem-subscreen textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+/* Mensajes informativos */
+.problem-subscreen .notice {
+      border: 1px solid #dfe4ea;
+      background: #f8fafc;
+      color: #4b5563;
+      border-radius: 8px;
+      padding: 13px 15px;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+.problem-subscreen .notice strong {
+      color: #1f2937;
+    }
+
+/* Texto auxiliar */
+.problem-subscreen .small-note {
+      color: #6b7280;
+      font-size: 13px;
+      line-height: 1.5;
+      margin-top: 4px;
+      margin-bottom: 12px;
+    }
+
+/* Estado visual de campos */
+.problem-subscreen input:focus,
+    .problem-subscreen textarea:focus,
+    .problem-subscreen select:focus {
+      outline: none;
+      border-color: #9aa4b2;
+      box-shadow: 0 0 0 2px rgba(107, 114, 128, 0.12);
+    }
+
+/* Responsive */
+@media (max-width: 1100px) {
+
+.step2-nav {
+        grid-template-columns: repeat(4, minmax(120px, 1fr));
+      }
+
+}
+
+@media (max-width: 760px) {
+
+.step2-nav {
+        grid-template-columns: repeat(2, minmax(120px, 1fr));
+      }
+
+.problem-subscreen .grid {
+        grid-template-columns: 1fr;
+      }
+
+.problem-subscreen .span-4,
+      .problem-subscreen .span-6,
+      .problem-subscreen .span-12 {
+        grid-column: span 1;
+      }
+
+}
+
+@media (max-width: 480px) {
+
+.step2-nav {
+        grid-template-columns: 1fr;
+      }
+
+}
+
+/* =========================================================
+   PASO 3 · ANÁLISIS DE OBJETIVOS
+   Estilos específicos del módulo
+   ========================================================= */
+
+/* Navegación interna del Paso 3 */
+.step3-nav {
+      display: grid;
+      grid-template-columns: repeat(7, minmax(110px, 1fr));
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+.step3-tab {
+      border: 1px solid #d7dce2;
+      background: #f7f8fa;
+      color: #4b5563;
+      border-radius: 8px;
+      padding: 11px 10px;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 1.3;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+.step3-tab:hover {
+      background: #eef1f4;
+      border-color: #c5ccd5;
+    }
+
+.step3-tab.active {
+      background: #1f2937;
+      color: #ffffff;
+      border-color: #1f2937;
+    }
+
+/* Subpantallas internas */
+.objective-subscreen {
+      display: none;
+      margin-top: 18px;
+    }
+
+.objective-subscreen.active {
+      display: block;
+    }
+
+/* Grid interno */
+.objective-subscreen .grid {
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+.objective-subscreen .span-4 {
+      grid-column: span 4;
+    }
+
+.objective-subscreen .span-6 {
+      grid-column: span 6;
+    }
+
+.objective-subscreen .span-12 {
+      grid-column: span 12;
+    }
+
+/* Tarjetas internas */
+.objective-subscreen .card .card {
+      margin-top: 0;
+      box-shadow: none;
+    }
+
+/* Mensajes informativos */
+.objective-subscreen .notice {
+      border: 1px solid #dfe4ea;
+      background: #f8fafc;
+      color: #4b5563;
+      border-radius: 8px;
+      padding: 13px 15px;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+.objective-subscreen .notice strong {
+      color: #1f2937;
+    }
+
+/* Texto auxiliar */
+.objective-subscreen .small-note {
+      color: #6b7280;
+      font-size: 13px;
+      line-height: 1.5;
+      margin-top: 4px;
+      margin-bottom: 12px;
+    }
+
+/* Campos */
+.objective-subscreen textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+.objective-subscreen input:focus,
+    .objective-subscreen textarea:focus,
+    .objective-subscreen select:focus {
+      outline: none;
+      border-color: #9aa4b2;
+      box-shadow: 0 0 0 2px rgba(107, 114, 128, 0.12);
+    }
+
+/* Tablas que utilizaremos en evaluación */
+.objective-subscreen table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+.objective-subscreen th,
+    .objective-subscreen td {
+      border: 1px solid #e1e5ea;
+      padding: 9px 10px;
+      text-align: left;
+      vertical-align: top;
+      font-size: 13px;
+    }
+
+.objective-subscreen th {
+      background: #f5f7f9;
+      font-weight: 700;
+    }
+
+/* Responsive */
+@media (max-width: 1100px) {
+
+.step3-nav {
+        grid-template-columns: repeat(4, minmax(120px, 1fr));
+      }
+
+}
+
+@media (max-width: 760px) {
+
+.step3-nav {
+        grid-template-columns: repeat(2, minmax(120px, 1fr));
+      }
+
+.objective-subscreen .grid {
+        grid-template-columns: 1fr;
+      }
+
+.objective-subscreen .span-4,
+      .objective-subscreen .span-6,
+      .objective-subscreen .span-12 {
+        grid-column: span 1;
+      }
+
+}
+
+@media (max-width: 480px) {
+
+.step3-nav {
+        grid-template-columns: 1fr;
+      }
+
+}

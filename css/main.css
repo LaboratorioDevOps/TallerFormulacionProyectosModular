@@ -1,0 +1,22 @@
+/* Punto de entrada único de estilos.
+   El orden de importación define la cascada: no reordenar sin comprobar §Step 5. */
+
+@import url("base/variables.css");
+@import url("base/reset.css");
+@import url("base/tipografia.css");
+
+@import url("layout/shell.css");
+@import url("layout/sidebar.css");
+@import url("layout/wizard.css");
+
+@import url("components/botones.css");
+@import url("components/campos.css");
+@import url("components/cards.css");
+@import url("components/tablas.css");
+@import url("components/badges.css");
+@import url("components/tabs.css");
+@import url("components/svg.css");
+
+@import url("pasos/paso1-involucrados.css");
+@import url("pasos/paso2-problema.css");
+@import url("pasos/paso3-objetivos.css");

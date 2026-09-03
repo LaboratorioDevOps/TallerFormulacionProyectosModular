@@ -1,0 +1,56 @@
+        <section class="screen active" id="screen0">
+          <div class="hero">
+            <div class="kicker">Punto de partida</div>
+            <h2>Ficha del caso</h2>
+            <p>Delimita el caso propio antes de iniciar el análisis metodológico. Esta información constituye el punto
+              de partida del proyecto.</p>
+          </div>
+
+          <div class="card">
+            <div class="case-grid">
+              <div class="form-group full">
+                <label for="casoTitulo">Título del proyecto</label>
+                <input id="casoTitulo" type="text" placeholder="Escriba un título claro y descriptivo">
+              </div>
+              <div class="form-group">
+                <label for="casoSector">Sector o ámbito de intervención</label>
+                <input id="casoSector" type="text" placeholder="Ej. desarrollo rural">
+              </div>
+              <div class="form-group">
+                <label for="casoTerritorio">Territorio</label>
+                <input id="casoTerritorio" type="text" placeholder="Municipio, departamento y zona">
+              </div>
+              <div class="form-group">
+                <label for="casoPoblacion">Población principal</label>
+                <input id="casoPoblacion" type="text" placeholder="Grupo poblacional">
+              </div>
+              <div class="form-group">
+                <label for="casoPeriodo">Periodo de referencia</label>
+                <input id="casoPeriodo" type="text" placeholder="Periodo del proyecto o del análisis">
+              </div>
+              <div class="form-group full">
+                <label for="casoSituacion">Situación actual</label>
+                <textarea id="casoSituacion"
+                  placeholder="Describa brevemente la situación que da origen al proyecto."></textarea>
+              </div>
+              <div class="form-group full">
+                <label for="casoPregunta">Pregunta orientadora</label>
+                <input id="casoPregunta" type="text" placeholder="¿Qué situación se busca transformar y para quién?">
+              </div>
+              <div class="form-group full">
+                <label for="casoDelimitacion">Delimitación del caso</label>
+                <textarea id="casoDelimitacion"
+                  placeholder="Precise población, territorio, periodo y alcance del análisis."></textarea>
+              </div>
+            </div>
+            <div class="case-note">
+              <strong>Uso metodológico:</strong> la ficha delimita el caso; no reemplaza el análisis de involucrados ni
+              la construcción del problema. La formulación debe partir de un caso propio, verificable y pertinente.
+            </div>
+          </div>
+          <div class="wizard-actions">
+            <button type="button" class="btn primary" id="btnStartWizard" data-accion="iniciar-wizard">
+              Iniciar construcción del Marco Lógico →
+            </button>
+          </div>
+        </section>

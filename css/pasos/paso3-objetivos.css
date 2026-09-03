@@ -1,0 +1,442 @@
+/* Áreas de trabajo */
+#objectiveTransformationWorkspace,
+    #potentialAssumptionsWorkspace,
+    #objectiveTreeWorkspace,
+    #objectiveValidationWorkspace,
+    #actionsWorkspace,
+    #actionTraceabilityWorkspace,
+    #actionClassificationWorkspace,
+    #alternativesWorkspace,
+    #alternativeEvaluationWorkspace,
+    #sensitivityWorkspace,
+    #strategySelectionWorkspace {
+      width: 100%;
+    }
+
+/* Espacio reservado para el árbol SVG */
+#objectiveTreeWorkspace {
+      min-height: 300px;
+      overflow-x: auto;
+    }
+
+/* Validación */
+#objectiveValidationWorkspace {
+      min-height: 160px;
+    }
+
+/* Acciones */
+#actionsWorkspace {
+      min-height: 180px;
+    }
+
+#actionTraceabilityWorkspace {
+      min-height: 140px;
+    }
+
+/* Alternativas */
+#actionClassificationWorkspace {
+      min-height: 180px;
+    }
+
+#alternativesWorkspace {
+      min-height: 180px;
+    }
+
+/* Evaluación */
+#alternativeEvaluationWorkspace {
+      min-height: 220px;
+      overflow-x: auto;
+    }
+
+#sensitivityWorkspace {
+      min-height: 160px;
+    }
+
+/* Selección */
+#strategySelectionWorkspace {
+      min-height: 120px;
+    }
+
+/* Indicadores visuales que utilizaremos después
+   para propuestas y confianza */
+.objective-proposal {
+      border-left: 4px solid #9ca3af;
+      background: #f9fafb;
+      padding: 12px 14px;
+      border-radius: 6px;
+    }
+
+.objective-proposal .proposal-label {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      color: #6b7280;
+      margin-bottom: 6px;
+    }
+
+.objective-confidence-low {
+      font-size: 11px;
+      font-weight: 700;
+      color: #6b7280;
+    }
+
+/* =========================================================
+   TRANSICIÓN ENTRE MÓDULOS
+   ========================================================= */
+.module-transition {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-top: 18px;
+      padding: 14px 16px;
+      border: 1px solid #dfe5e8;
+      border-radius: 10px;
+      background: #f8fafb;
+    }
+
+.module-transition-text {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+.module-transition-text strong {
+      color: #273442;
+      font-size: 12px;
+    }
+
+.module-transition-text span {
+      color: #74818a;
+      font-size: 10.5px;
+    }
+
+@media(max-width:650px) {
+
+.module-transition {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+}
+
+/* =========================================================
+   PASO 3.1 · TRANSFORMACIÓN
+   ========================================================= */
+.objective-transformation-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 14px;
+      padding: 12px 14px;
+      border: 1px solid #dfe5e8;
+      border-radius: 9px;
+      background: #f8fafb;
+    }
+
+.objective-transformation-toolbar strong {
+      display: block;
+      color: #273442;
+      font-size: 12px;
+    }
+
+.objective-transformation-toolbar span {
+      display: block;
+      margin-top: 3px;
+      color: #77838c;
+      font-size: 10.5px;
+    }
+
+.objective-transformation-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+.objective-transformation-card {
+      padding: 13px 14px;
+      border: 1px solid #dfe5e8;
+      border-radius: 10px;
+      background: #fff;
+    }
+
+.objective-source {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding-bottom: 9px;
+      border-bottom: 1px solid #edf0f2;
+    }
+
+.objective-source>div:first-child {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+.objective-code {
+      color: #273442;
+      font-size: 11px;
+      font-weight: 850;
+    }
+
+.objective-role {
+      display: inline-flex;
+      padding: 3px 6px;
+      border-radius: 5px;
+      font-size: 8.5px;
+      font-weight: 800;
+    }
+
+.objective-role.purpose {
+      background: #eef1f4;
+      color: #374654;
+    }
+
+.objective-role.means {
+      background: #fbf2e8;
+      color: #8b5a2d;
+    }
+
+.objective-role.ends {
+      background: #edf4f9;
+      color: #3e6787;
+    }
+
+.objective-proposal-badge {
+      display: inline-flex !important;
+      margin: 0 !important;
+      padding: 3px 6px;
+      border-radius: 5px;
+      background: #fff5df;
+      color: #806126;
+      font-size: 8px !important;
+      font-weight: 800;
+    }
+
+.objective-source-meta {
+      color: #7b8790;
+      font-size: 9.5px;
+    }
+
+.objective-conversion {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 34px minmax(0, 1fr);
+      align-items: center;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+.objective-problem-side,
+    .objective-target-side {
+      min-width: 0;
+    }
+
+.objective-problem-side label,
+    .objective-target-side label {
+      display: block;
+      margin-bottom: 5px;
+      color: #5c6a74;
+      font-size: 9.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .03em;
+    }
+
+.objective-source-text {
+      min-height: 72px;
+      padding: 9px 10px;
+      border: 1px solid #e3e7e9;
+      border-radius: 7px;
+      background: #f7f9fa;
+      color: #687680;
+      font-size: 10.5px;
+      line-height: 1.45;
+    }
+
+.objective-target-side textarea {
+      width: 100%;
+      min-height: 72px;
+      box-sizing: border-box;
+      resize: vertical;
+    }
+
+.objective-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #8a969e;
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+.objective-edit-note {
+      margin-top: 5px;
+      color: #89949b;
+      font-size: 9px;
+      line-height: 1.4;
+    }
+
+.objective-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 10px;
+      padding-top: 9px;
+      border-top: 1px solid #edf0f2;
+    }
+
+.objective-assumption {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: #596873;
+      font-size: 10px;
+      cursor: pointer;
+    }
+
+.objective-assumption input {
+      width: auto;
+      min-height: auto;
+    }
+
+.objective-origin {
+      color: #8a959c;
+      font-size: 9px;
+    }
+
+.objective-method-note {
+      margin-top: 12px;
+    }
+
+.objective-assumption-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+.objective-assumption-card {
+      display: grid;
+      grid-template-columns: 70px minmax(0, 1fr);
+      gap: 4px 10px;
+      padding: 10px 12px;
+      border: 1px solid #eadfca;
+      border-left: 3px solid #b28742;
+      border-radius: 8px;
+      background: #fffdf8;
+    }
+
+.objective-assumption-card strong {
+      color: #806126;
+      font-size: 10.5px;
+    }
+
+.objective-assumption-card span {
+      color: #596873;
+      font-size: 10.5px;
+      line-height: 1.4;
+    }
+
+.objective-assumption-card small {
+      grid-column: 2;
+      color: #8b7a5b;
+      font-size: 9px;
+    }
+
+@media(max-width:750px) {
+
+.objective-transformation-toolbar {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+.objective-conversion {
+        grid-template-columns: 1fr;
+      }
+
+.objective-arrow {
+        transform: rotate(90deg);
+      }
+
+.objective-source {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+.objective-card-footer {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+.objective-assumption-card {
+        grid-template-columns: 1fr;
+      }
+
+.objective-assumption-card small {
+        grid-column: auto;
+      }
+
+}
+
+.potential-assumptions-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+.potential-assumption-card {
+      padding: 11px 13px;
+      border: 1px solid #e4dfd4;
+      border-left: 3px solid #b28742;
+      border-radius: 8px;
+      background: #fffdf8;
+    }
+
+.potential-assumption-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+.potential-assumption-header>div {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+.potential-assumption-header strong {
+      color: #374654;
+      font-size: 10.5px;
+    }
+
+.potential-assumption-badge {
+      padding: 3px 6px;
+      border-radius: 5px;
+      background: #f4ead7;
+      color: #806126;
+      font-size: 8px;
+      font-weight: 800;
+    }
+
+.potential-assumption-objective {
+      margin-top: 8px;
+      color: #4f606c;
+      font-size: 10.5px;
+      line-height: 1.45;
+    }
+
+.potential-assumption-note {
+      margin-top: 7px;
+      padding-top: 7px;
+      border-top: 1px solid #eee8dc;
+      color: #8a7d68;
+      font-size: 9px;
+      line-height: 1.4;
+    }

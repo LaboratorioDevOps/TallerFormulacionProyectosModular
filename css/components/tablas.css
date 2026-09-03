@@ -1,0 +1,116 @@
+.actor-table-wrap {
+      width: 100%;
+      overflow-x: auto;
+    }
+
+.actor-table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+    }
+
+.actor-table th,
+    .actor-table td {
+      border: 1px solid var(--gris-200);
+      padding: 12px;
+      vertical-align: top;
+      text-align: left;
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+.actor-table th {
+      background: var(--gris-100);
+      color: var(--gris-900);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+.actor-table th:nth-child(1) {
+      width: 21%
+    }
+
+.actor-table th:nth-child(2) {
+      width: 24%
+    }
+
+.actor-table th:nth-child(3) {
+      width: 31%
+    }
+
+.actor-table th:nth-child(4) {
+      width: 24%
+    }
+
+.actor-table td.empty-cell {
+      background: #fff0f0;
+      color: #b42318;
+    }
+
+.actor-table-actions {
+      display: flex;
+      gap: 6px;
+      margin-top: 10px;
+    }
+
+.characterization-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 14px;
+    }
+
+.characterization-table th,
+    .characterization-table td {
+      border: 1px solid var(--gris-200);
+      padding: 10px;
+      text-align: left;
+      font-size: 12px;
+      vertical-align: middle;
+    }
+
+.characterization-table th {
+      background: var(--gris-100);
+      font-weight: 800;
+    }
+
+.node-evidence-table-wrap {
+      width: 100%;
+      overflow: auto;
+      border: 1px solid #dfe5e8;
+      border-radius: 10px;
+      background: #fff;
+    }
+
+.node-evidence-table {
+      min-width: 1050px;
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 10.5px;
+    }
+
+.node-evidence-table th {
+      padding: 10px;
+      background: #f3f6f7;
+      border-bottom: 1px solid #dce2e5;
+      color: #52616c;
+      font-size: 9.5px;
+      font-weight: 800;
+      text-align: left;
+      vertical-align: top;
+    }
+
+.node-evidence-table td {
+      padding: 10px;
+      border-bottom: 1px solid #edf0f2;
+      vertical-align: top;
+      color: #596873;
+      line-height: 1.45;
+    }
+
+.node-evidence-table tbody tr:last-child td {
+      border-bottom: 0;
+    }
+
+.node-evidence-table tbody tr:hover td {
+      background: #fafcfc;
+    }

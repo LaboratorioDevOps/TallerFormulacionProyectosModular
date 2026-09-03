@@ -1,0 +1,13 @@
+:root {
+      --verde: #0b5d3b;
+      --verde-oscuro: #08452d;
+      --verde-suave: #eaf4ef;
+      --gris-900: #1f2933;
+      --gris-700: #4b5563;
+      --gris-500: #6b7280;
+      --gris-300: #d1d5db;
+      --gris-200: #e5e7eb;
+      --gris-100: #f3f4f6;
+      --blanco: #fff;
+      --sombra: 0 8px 24px rgba(15, 23, 42, .06);
+    }

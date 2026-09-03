@@ -1,0 +1,123 @@
+.sidebar {
+      position: fixed;
+      inset: 0 auto 0 0;
+      width: 286px;
+      background: #fff;
+      border-right: 1px solid var(--gris-200);
+      overflow-y: auto;
+      z-index: 10;
+    }
+
+.brand {
+      padding: 24px 22px 20px;
+      border-bottom: 1px solid var(--gris-200);
+    }
+
+.brand-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 9px;
+      background: var(--verde);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      margin-bottom: 13px;
+    }
+
+.brand h1 {
+      font-size: 16px;
+      line-height: 1.3;
+      margin: 0 0 5px
+    }
+
+.brand p {
+      font-size: 12px;
+      color: var(--gris-500);
+      margin: 0;
+      line-height: 1.45
+    }
+
+.nav-section {
+      padding: 18px 12px 4px
+    }
+
+.nav-section-title {
+      padding: 0 10px 8px;
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--gris-500);
+    }
+
+.nav-item {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      border: 0;
+      background: transparent;
+      color: var(--gris-700);
+      text-align: left;
+      padding: 9px 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 2px 0;
+    }
+
+.nav-item:hover {
+      background: var(--gris-100);
+      color: var(--gris-900)
+    }
+
+.nav-item.active {
+      background: var(--verde-suave);
+      color: var(--verde-oscuro);
+      font-weight: 700
+    }
+
+.nav-num {
+      flex: 0 0 28px;
+      width: 28px;
+      height: 28px;
+      border: 1px solid var(--gris-300);
+      border-radius: 7px;
+      display: grid;
+      place-items: center;
+      font-size: 12px;
+      font-weight: 700;
+      background: #fff;
+    }
+
+.nav-item.active .nav-num {
+      border-color: #a9cdbd;
+      background: #fff;
+      color: var(--verde)
+    }
+
+.nav-label {
+      font-size: 13px;
+      line-height: 1.25
+    }
+
+@media(max-width:850px) {
+
+.sidebar {
+        width: 235px
+      }
+
+}
+
+@media(max-width:650px) {
+
+.sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        max-height: none;
+        border-right: 0;
+        border-bottom: 1px solid var(--gris-200);
+      }
+
+}

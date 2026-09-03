@@ -208,7 +208,7 @@ FormulacionProyectosModular/
 | **SRP** | Un IIFE anónimo de 2.637 líneas concentra el estado, la navegación, todo el módulo de involucrados y todo el de objetivos: cuatro motivos de cambio en un solo ámbito | Cada módulo tiene un único motivo de cambio. Ningún archivo supera las ~400 líneas, salvo los generadores SVG que se migran literalmente |
 | **OCP** | Añadir un paso obliga a editar el IIFE y el array `NAV` | Añadir un paso es registrarlo en `registro-pasos.js`. El shell no cambia |
 | **LSP** | No aplica: no hay polimorfismo | Todos los módulos de paso cumplen el mismo contrato y son intercambiables desde el router |
-| **ISP** | `state` expone 100% del modelo a todo el código | El estado se consume por funciones de acceso acotadas al dominio de cada paso |
+| **ISP** | `state` es global: cualquier función alcanza cualquier parte del modelo | Los módulos de `utils/` no reciben el estado, solo argumentos. El acceso al modelo pasa por `core/estado.js`. Cumplimiento parcial y declarado: ver la limitación de encapsulamiento en §5.1 |
 | **DIP** | El Paso 3 llama directamente a las funciones de nodos del Paso 2 | El Paso 3 depende de la interfaz de lectura del estado, no del módulo del Paso 2 |
 
 ---
@@ -224,17 +224,19 @@ Sustituye a `window.state`. El objeto queda privado al módulo y se expone media
 **Interfaz:**
 
 ```js
-export function obtenerEstado()            // lectura (copia superficial defensiva)
-export function actualizarCaso(parcial)
-export function actualizarProblema(parcial)
-export function reemplazarNodos(nodos)
-export function reemplazarInvolucrados(actores)
-export function reemplazarObjetivos(objetivos)
-export function cargarEstado(objeto)       // usado por importar JSON y por localStorage
-export function suscribir(callback)        // devuelve función para cancelar
+export function obtenerEstado()        // devuelve el objeto vivo
+export function notificarCambio()      // avisa a los suscriptores tras mutar
+export function cargarEstado(objeto)   // usado por importar JSON y por localStorage
+export function reiniciarEstado()
+export function suscribir(callback)    // devuelve función para cancelar
+export function estadoInicial()        // fábrica del objeto por defecto
 ```
 
-**Restricción de migración:** la *forma* del objeto de estado no cambia. Las claves (`caso`, `involucrados`, `problema`, `nodos`, `objetivos`, `current`…) se conservan literalmente para que el JSON exportado por la versión actual siga siendo importable por la nueva. Lo único que cambia es la vía de acceso.
+**Por qué `obtenerEstado()` devuelve el objeto vivo y no una copia.** De los 142 accesos a `state` en el original, una parte son mutaciones directas (`state.nodos.push(...)`, `state.problema.condicion = ...`). Devolver una copia defensiva las descartaría en silencio y obligaría a reescribir cada punto de mutación con una función de acceso propia: dejaría de ser una migración mecánica y multiplicaría la superficie de error, justo en un proyecto sin pruebas automatizadas.
+
+La contrapartida es que el encapsulamiento es de *alcance*, no de *escritura*: se elimina la variable global `window.state` y se centraliza la notificación de cambios, pero un módulo aún puede mutar el objeto. Es una limitación consciente. Endurecerla —sustituyendo cada mutación por una función de acceso por dominio— es una mejora posterior que conviene abordar cuando existan pruebas que la respalden.
+
+**Restricción de migración:** la *forma* del objeto de estado no cambia. Las claves (`current`, `caso`, `involucrados`, `editingActorIndex`, `problema`, `nodos`, `objetivos`, `acciones`, `alternativas`, `evaluacion`, `seleccion`, `bitacora`) se conservan literalmente, para que el JSON exportado por la versión actual siga siendo importable por la nueva.
 
 ### 5.2 `core/almacenamiento.js`
 
